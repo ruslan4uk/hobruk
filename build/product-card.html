@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Каталог продукции</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <section class="top">
+      <div class="container">
+        <div class="top__wrap">
+          <a href="#" class="logo"><img src="img/general/logo.svg" /></a>
+          <div class="top__search search">
+            <input type="text" class="search__input" placeholder="Поиск">
+            <input type="button" value="" class="search__btn">
+          </div>
+          <div class="top__btns">
+            <div class="top__iblock icon">
+              <svg class="icon__svg icon__svg--blue">
+                <use xlink:href="img/sprite.svg#icon-profile"></use>
+              </svg>
+              <svg class="icon__svg icon__svg--blue icon__svg--arr">
+                <use xlink:href="img/sprite.svg#icon-arr"></use>
+              </svg>
+            </div>
+            <div class="top__iblock icon">
+              <svg class="icon__svg icon__svg--purple">
+                <use xlink:href="img/sprite.svg#icon-favorites"></use>
+              </svg>
+              <span class="icon__right">(2)</span>
+            </div>
+            <div class="top__iblock top__iblock--pr0 icon">
+              <svg class="icon__svg icon__svg--blue">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="icon__right">1432P</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="navigation">
+      <div class="container">
+        <div class="navigation__wrap">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="catalog.html" class="navigation__link">Картины по номерам</a></li>
+            <li class="navigation__item"><a href="photo-to-image.html" class="navigation__link">Картины по фото</a></li>
+            <li class="navigation__item"><a href="" class="navigation__link">Аксессуары</a></li>
+            <li class="navigation__item"><a href="delivery.html" class="navigation__link">Доставка и оплата</a></li>
+            <li class="navigation__item"><a href="obmen.html" class="navigation__link">Возврат</a></li>
+            <li class="navigation__item"><a href="opt.html" class="navigation__link">Оптовые покупатели</a></li>
+            <li class="navigation__item"><a href="certificate.html" class="navigation__link">Подарочные сертификаты</a></li>
+            <li class="navigation__item"><a href="" class="navigation__link">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="head">
+      <div class="container container--smp">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb--mt">
+            <li class="breadcrumb__item"><a href="#">Главная</a></li>
+            <li class="breadcrumb__item"><a href="#">Картины по номерам</a></li>
+            <li class="breadcrumb__item"><a href="#">Пейзажи</a></li>
+            <li class="breadcrumb__item active" aria-current="page">Картина “Ежик на дереве”</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    <section class="pcard">
+      <div class="container container--smp">
+        <div class="pcard__wrap">
+          <div class="pcard__mobile">
+            <div class="pcard__title">Ежик на дереве</div>
+            <div class="pcard__availability pcard__availability--availability">В наличии</div>
+          </div>
+          <div class="pcard__gallery">
+            <img src="img/example/gallery.png" alt="">
+            <p>Этим товаром за неделю заинтересовались 45 человек</p>
+          </div>
+          <div class="pcard__right">
+            <div class="pcard__desctop">
+              <div class="pcard__title">Ежик на дереве</div>
+              <div class="pcard__availability pcard__availability--availability">В наличии</div>
+            </div>
+            <div class="pcard__frw">
+              <div class="pcard__favorites icon">
+                <svg class="icon__svg icon__svg--purple">
+                  <use xlink:href="img/sprite.svg#icon-favorites"></use>
+                </svg>
+                <span class="icon__right">В избранное</span>
+              </div>
+              <div class="pcard__review icon">
+                <svg class="icon__svg icon__svg--purple">
+                  <use xlink:href="img/sprite.svg#icon-review"></use>
+                </svg>
+                <span class="icon__right">Отзывов пока нет</span>
+              </div>
+            </div>
+            <div class="pcard__specifications specifications">
+              <div class="specifications__group">
+                <div class="specifications__left">Код</div>
+                <div class="specifications__right">HS456S</div>
+              </div>
+              <div class="specifications__group">
+                <div class="specifications__left">Размер</div>
+                <div class="specifications__right">50х40 см</div>
+              </div>
+              <div class="specifications__group">
+                <div class="specifications__left">Вес</div>
+                <div class="specifications__right">1 кг</div>
+              </div>
+            </div>
+            <div class="pcard__pcount">
+              <div class="pcard__count">
+                <input type="button" value="−" id="button_minus">
+                <input type="text" step="1" min="1" max="10" id="num_count" name="quantity" value="1" title="Qty">
+                <input type="button" value="+" id="button_plus">
+              </div>
+              <div class="pcard__price"><span>1019</span> ₽</div>
+              <div class="pcard__oldprice"><span>1919</span> ₽</div>
+            </div>
+            <div class="pcard__bonus">Бонусных баллов: <span>1019</span> баллов</div>
+            <div class="pcard__btns">
+              <button type="submit" form="form1" class="btn btn--purple" value="Submit">+ Добавить в корзину</button>
+              <a href="" class="btn btn--blue">Купить в один клик</a>
+            </div>
+            <div class="pcard__callback"> Остались вопросы? У нас есть ответы! <a href="#" class="pcard__callback-link">Задать вопрос</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="pcard__tabs tabs">
+          <div class="tabs__list">
+            <div class="tabs__item active" data-tabs-nav="1">Описание</div>
+            <div class="tabs__item" data-tabs-nav="2">Отзывы <span>(1)</span></div>
+            <div class="tabs__item" data-tabs-nav="3">Способы доставки</div>
+          </div>
+          <div class="tabs__content active" data-tabs-content="1">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+          </div>
+          <div class="tabs__content" data-tabs-content="2">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+          </div>
+          <div class="tabs__content" data-tabs-content="3">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="pcard__advantages advantages">
+          <div class="advantages__wrap">
+            <div class="advantages__item">
+              <p>Нам доверяют</p>
+              <div class="advantages__b">
+                <p>32 000</p>
+                <p>покупателей</p>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <p>Лучшие цены - <br />свое производство</p>
+              <div class="advantages__b">
+                <svg class="advantages__icon">
+                  <use xlink:href="img/sprite.svg#icon-pcardPrice"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <p>Обмен-возврат в течение</p>
+              <div class="advantages__b">
+                <p>60</p>
+                <p>дней</p>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <p>Приятная бонусная система</p>
+              <div class="advantages__b">
+                <svg class="advantages__icon">
+                  <use xlink:href="img/sprite.svg#icon-pcardBonus"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <p>Пятая картина в подарок</p>
+              <div class="advantages__b">
+                <svg class="advantages__icon">
+                  <use xlink:href="img/sprite.svg#icon-pcardSurprize"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <p>Быстрая доставка. <br />От 3000 ₽ - бесплатно</p>
+              <div class="advantages__b">
+                <svg class="advantages__icon">
+                  <use xlink:href="img/sprite.svg#icon-pcardDelivery"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pcslider">
+      <div class="container container--smp">
+        <h2>С этим товаром покупают</h2>
+        <div class="pcslider__list pcslider__list--revers js--pcslider-product owl-carousel">
+          <div class="product ">
+            <a href="product-card.html" class="product__image">
+              <img src="img/example/product.png" alt="">
+              <div class="product__tp">
+                <div class="product__title">Ежик на дереве</div>
+                <div class="product__prices">
+                  <div class="product__price">1019 ₽</div>
+                  <div class="product__oldprice">1919 ₽</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__btns">
+              <div class="product__icon icon">
+                <svg class="icon__svg icon__svg--purple">
+                  <use xlink:href="img/sprite.svg#icon-favorites"></use>
+                </svg>
+                <span class="icon__right">123</span>
+              </div>
+              <div class="product__icon product__icon--blue icon">
+                <svg class="icon__svg icon__svg">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="product__short-view">Быстрый просмотр</div>
+          </div>
+          <div class="product ">
+            <a href="product-card.html" class="product__image">
+              <img src="img/example/product.png" alt="">
+              <div class="product__tp">
+                <div class="product__title">Ежик на дереве</div>
+                <div class="product__prices">
+                  <div class="product__price">1019 ₽</div>
+                  <div class="product__oldprice">1919 ₽</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__btns">
+              <div class="product__icon icon">
+                <svg class="icon__svg icon__svg--purple">
+                  <use xlink:href="img/sprite.svg#icon-favorites"></use>
+                </svg>
+                <span class="icon__right">123</span>
+              </div>
+              <div class="product__icon product__icon--blue icon">
+                <svg class="icon__svg icon__svg">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="product__short-view">Быстрый просмотр</div>
+          </div>
+          <div class="product ">
+            <a href="product-card.html" class="product__image">
+              <img src="img/example/product.png" alt="">
+              <div class="product__tp">
+                <div class="product__title">Ежик на дереве</div>
+                <div class="product__prices">
+                  <div class="product__price">1019 ₽</div>
+                  <div class="product__oldprice">1919 ₽</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__btns">
+              <div class="product__icon icon">
+                <svg class="icon__svg icon__svg--purple">
+                  <use xlink:href="img/sprite.svg#icon-favorites"></use>
+                </svg>
+                <span class="icon__right">123</span>
+              </div>
+              <div class="product__icon product__icon--blue icon">
+                <svg class="icon__svg icon__svg">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="product__short-view">Быстрый просмотр</div>
+          </div>
+          <div class="product ">
+            <a href="product-card.html" class="product__image">
+              <img src="img/example/product.png" alt="">
+              <div class="product__tp">
+                <div class="product__title">Ежик на дереве</div>
+                <div class="product__prices">
+                  <div class="product__price">1019 ₽</div>
+                  <div class="product__oldprice">1919 ₽</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__btns">
+              <div class="product__icon icon">
+                <svg class="icon__svg icon__svg--purple">
+                  <use xlink:href="img/sprite.svg#icon-favorites"></use>
+                </svg>
+                <span class="icon__right">123</span>
+              </div>
+              <div class="product__icon product__icon--blue icon">
+                <svg class="icon__svg icon__svg">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="product__short-view">Быстрый просмотр</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pcslider">
+      <div class="container container--smp">
+        <h2>Картины в этой же категории</h2>
+        <div class="pcslider__list pcslider__height js--pcslider-product-width owl-carousel">
+          <div class="product ">
+            <a href="product-card.html" class="product__image">
+              <img src="img/example/product.png" alt="">
+              <div class="product__tp">
+                <div class="product__title">Ежик на дереве</div>
+                <div class="product__prices">
+                  <div class="product__price">1019 ₽</div>
+                  <div class="product__oldprice">1919 ₽</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__btns">
+              <div class="product__icon icon">
+                <svg class="icon__svg icon__svg--purple">
+                  <use xlink:href="img/sprite.svg#icon-favorites"></use>
+                </svg>
+                <span class="icon__right">123</span>
+              </div>
+              <div class="product__icon product__icon--blue icon">
+                <svg class="icon__svg icon__svg">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="product__short-view">Быстрый просмотр</div>
+          </div>
+          <div class="product ">
+            <a href="product-card.html" class="product__image">
+              <img src="img/example/product.png" alt="">
+              <div class="product__tp">
+                <div class="product__title">Ежик на дереве</div>
+                <div class="product__prices">
+                  <div class="product__price">1019 ₽</div>
+                  <div class="product__oldprice">1919 ₽</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__btns">
+              <div class="product__icon icon">
+                <svg class="icon__svg icon__svg--purple">
+                  <use xlink:href="img/sprite.svg#icon-favorites"></use>
+                </svg>
+                <span class="icon__right">123</span>
+              </div>
+              <div class="product__icon product__icon--blue icon">
+                <svg class="icon__svg icon__svg">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="product__short-view">Быстрый просмотр</div>
+          </div>
+          <div class="product ">
+            <a href="product-card.html" class="product__image">
+              <img src="img/example/product.png" alt="">
+              <div class="product__tp">
+                <div class="product__title">Ежик на дереве</div>
+                <div class="product__prices">
+                  <div class="product__price">1019 ₽</div>
+                  <div class="product__oldprice">1919 ₽</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__btns">
+              <div class="product__icon icon">
+                <svg class="icon__svg icon__svg--purple">
+                  <use xlink:href="img/sprite.svg#icon-favorites"></use>
+                </svg>
+                <span class="icon__right">123</span>
+              </div>
+              <div class="product__icon product__icon--blue icon">
+                <svg class="icon__svg icon__svg">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="product__short-view">Быстрый просмотр</div>
+          </div>
+          <div class="product ">
+            <a href="product-card.html" class="product__image">
+              <img src="img/example/product.png" alt="">
+              <div class="product__tp">
+                <div class="product__title">Ежик на дереве</div>
+                <div class="product__prices">
+                  <div class="product__price">1019 ₽</div>
+                  <div class="product__oldprice">1919 ₽</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__btns">
+              <div class="product__icon icon">
+                <svg class="icon__svg icon__svg--purple">
+                  <use xlink:href="img/sprite.svg#icon-favorites"></use>
+                </svg>
+                <span class="icon__right">123</span>
+              </div>
+              <div class="product__icon product__icon--blue icon">
+                <svg class="icon__svg icon__svg">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="product__short-view">Быстрый просмотр</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pcslider">
+      <div class="container container--smp">
+        <h2>С этим товаром покупают</h2>
+        <div class="pcslider__list js--pcslider-product owl-carousel">
+          <a href="search.html" class="category ">
+            <div class="category__img"><img src="img/example/product.png" alt=""></div>
+            <div class="category__title">Цветы</div>
+            <div class="category__count">35 сюжета</div>
+          </a>
+          <a href="search.html" class="category ">
+            <div class="category__img"><img src="img/example/product.png" alt=""></div>
+            <div class="category__title">Цветы</div>
+            <div class="category__count">35 сюжета</div>
+          </a>
+          <a href="search.html" class="category ">
+            <div class="category__img"><img src="img/example/product.png" alt=""></div>
+            <div class="category__title">Цветы</div>
+            <div class="category__count">35 сюжета</div>
+          </a>
+          <a href="search.html" class="category ">
+            <div class="category__img"><img src="img/example/product.png" alt=""></div>
+            <div class="category__title">Цветы</div>
+            <div class="category__count">35 сюжета</div>
+          </a>
+        </div>
+        <div class="pcslider__more">
+          <a href="" class="btn btn--more">Все категории</a>
+        </div>
+      </div>
+    </section>
+    <section class="mtag">
+      <div class="container container--smp">
+        <h3>Похожие теги</h3>
+        <div class="mtag__wrap">
+          <div class="mtag__item"><a href="" class="mtag__link">Животные</a></div>
+          <div class="mtag__item"><a href="" class="mtag__link">Пейзажи</a></div>
+          <div class="mtag__item"><a href="" class="mtag__link">Море</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__col">
+            <div class="footer__title footer__title--border">Карта сайта</div>
+            <ul class="footer__list">
+              <li class="footer__item"><a href="" class="footer__link">Картины по номерам</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Картины по фото</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Аксессуары</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Доставка и оплата</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Возврат</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Оптовые покупатели</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Подарочные сертификаты</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title footer__title--border">Контакты</div>
+            <div class="footer__adress">
+              <p>Адрес:</p>
+              <p>г. Энгельс, ул. Северная 13 Б</p>
+              <p>Пн-Пт 9.00 - 18.00</p>
+            </div>
+            <div class="footer__adress">
+              <p>Телефон:</p>
+              <p>+7 (499) 350 97 00</p>
+            </div>
+            <div class="footer__adress">
+              <p>E-mail:</p>
+              <p>info@hobbyshop-ru.ru</p>
+            </div>
+          </div>
+          <div class="footer__col footer__col--subscribe">
+            <div class="footer__title">Подпишитесь на наши новости и получите купон на скидку 10%</div>
+            <form action="" class="footer__form form">
+              <div class="form__group"><input type="text" placeholder="Введите e-mail" class="form__input"></div>
+              <div class="form__group"><input type="submit" value="Подписаться" class="btn btn--blue"></div>
+            </form>
+            <div class="footer__social social">
+              <div class="social__wrap">
+                <div class="social__item">
+                  <a href="" class="social__link">
+                    <svg class="social__svg">
+                      <use xlink:href="img/sprite.svg#icon-socialInst"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="social__item">
+                  <a href="" class="social__link">
+                    <svg class="social__svg">
+                      <use xlink:href="img/sprite.svg#icon-socialVk"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="copyright">
+      <p>Политика конфиденциальности</p>
+      <p>Copyright © 2018</p>
+    </section>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

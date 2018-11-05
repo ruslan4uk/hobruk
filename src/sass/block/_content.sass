@@ -1,0 +1,21 @@
+.content
+    margin-top: 2rem
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        &--mrevers
+            flex-direction: column-reverse
+            +rmin($sm)
+                flex-direction: row
+    &__left
+        width: 100%
+        +rmin($sm)
+            width: calc(55% - 1rem)
+    &__right
+        width: 100%
+        +rmin($sm)
+            width: calc(45% - 1rem)
+    
+    & p 
+        margin-bottom: 1rem

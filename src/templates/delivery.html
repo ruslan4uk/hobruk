@@ -1,0 +1,142 @@
+---
+title: Доставка и оплата
+category_class: list__category
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# top #}
+	{% include "partials/block/_top.html" %}
+
+	{# navigation #}
+	{% include "partials/block/_navigation.html" %}
+
+    <section class="head">
+        <div class="container">
+            {# breadcrumb #}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb--mt">
+                    <li class="breadcrumb__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb__item active" aria-current="page">Доставка и оплата</li>
+                </ol>
+            </nav>
+            <div class="title">Доставка и оплата</div>
+        </div>
+    </section>
+    
+    <section class="delivery">
+        <div class="container">
+            {# 1 block #}
+            <h2>Доставка</h2>
+            <div class="delivery__wrap delivery__wrap--mb">
+                <div class="delivery__item delivery__item--center">
+                    <svg class="delivery__icon"><use xlink:href="img/sprite.svg#icon-deliveryWord"></use></svg>
+                    <div class="delivery__subtext">
+                        Доставляем заказы <br /><strong>по всему миру</strong>
+                    </div>
+                </div>
+                <div class="delivery__item">
+                    <svg class="delivery__icon"><use xlink:href="img/sprite.svg#icon-deliveryMoney"></use></svg>
+                    <div class="delivery__subtext">
+                        <strong>Минимальная сумма</strong><br />заказа составляет 400 р
+                    </div>
+                </div>
+                <div class="delivery__item">
+                    <svg class="delivery__icon"><use xlink:href="img/sprite.svg#icon-deliveryCar"></use></svg>
+                    <div class="delivery__subtext">
+                        <strong>Бесплатная доставка</strong> на заказ<br />от 3000 рублей по России и СНГ
+                    </div>
+                </div>
+            </div>
+
+            {# 2 block (delivery card) #}
+            <h2>Способы доставки</h2>
+            <div class="delivery__wrap delivery__wrap--mb">
+                <div class="delivery__card">
+                    <div class="delivery__card-header">Курьером</div>
+                    <div class="delivery__card-content">
+                        <p>Стоимость: <strong>555 рублей</strong></p>
+                        <p>Доставка: <strong>до двери вашей квартиры/офиса</strong></p>
+                        <p>Сроки доставки: <strong>1-1000 дней (точный срок доставки будет рассчитан при оформлении заказа)</strong></p>
+                    </div>
+                </div>
+                <div class="delivery__card">
+                    <div class="delivery__card-header">В пункте самовывоза</div>
+                    <div class="delivery__card-content">
+                        <p>Стоимость: <strong>5 рублей</strong></p>
+                        <p>Доставка: <strong>до рандомного отделения почты России, возможно, даже не в вашем городе, список пунктов самовывоза</strong></p>
+                        <p>Сроки доставки: <strong>1000-5000 дней (точный срок доставки будет рассчитан при оформлении заказа)</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            {# 3 block company #}
+            <h2>Компании, которыми мы осуществляем доставку</h2>
+            <div class="delivery__wrap delivery__wrap--left delivery__wrap--mb">
+                <div class="delivery__company">
+                    <a href="#"><img src="img/example/pochta.png" alt=""></a>
+                </div>
+                <div class="delivery__company">
+                    <a href="#"><img src="img/example/pochta.png" alt=""></a>
+                </div>
+                <div class="delivery__company">
+                    <a href="#"><img src="img/example/pochta.png" alt=""></a>
+                </div>
+                <div class="delivery__company">
+                    <a href="#"><img src="img/example/pochta.png" alt=""></a>
+                </div>
+            </div>
+
+            {# 4 block  #}
+            <h2>Способы оплаты</h2>
+            <div class="delivery__wrap delivery__wrap--mb">
+                <div class="delivery__pay">
+                    <svg class="delivery__icon"><use xlink:href="img/sprite.svg#icon-pay1"></use></svg>
+                    <div class="delivery__pay-text">
+                        <div class="delivery__pay-title">Наличные</div>
+                        Лично курьеру или при получении заказа в почтовом отделении
+                    </div>
+                </div>
+
+                <div class="delivery__pay">
+                    <svg class="delivery__icon"><use xlink:href="img/sprite.svg#icon-pay2"></use></svg>
+                    <div class="delivery__pay-text">
+                        <div class="delivery__pay-title">Карта</div>
+                        Лично курьеру или при оформлении заказа на сайте
+                    </div>
+                </div>
+
+                <div class="delivery__pay">
+                    <svg class="delivery__icon"><use xlink:href="img/sprite.svg#icon-pay3"></use></svg>
+                    <div class="delivery__pay-text">
+                        <div class="delivery__pay-title">Платежной онлайн-системой</div>
+                        Принимаем оплату через QIWI кошелек, WebMoney,Яндекс.Деньги
+                    </div>
+                </div>
+
+                <div class="delivery__pay">
+                    <svg class="delivery__icon"><use xlink:href="img/sprite.svg#icon-pay4"></use></svg>
+                    <div class="delivery__pay-text">
+                        <div class="delivery__pay-title">Оплата по квитанции Сбербанка</div>
+                        для оплаты Вам необходимо распечатать и оплатить квитанцию Сбербанка РФ, а затем прислать нам на электронную почту sales@demostore.ru отсканированую копию полученного документа об оплате.
+                    </div>
+                </div>
+
+                <div class="delivery__pay">
+                    <svg class="delivery__icon"><use xlink:href="img/sprite.svg#icon-pay5"></use></svg>
+                    <div class="delivery__pay-text">
+                        <div class="delivery__pay-title">Безналичный расчет (по счету)</div>
+                        Такой расчет более всего подходит для организаций. Вы делаете заказ, распечатываете выставленный счет, оплачиваете его и созваниваетесь с нами
+для уточнения даты получения заказа.
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>	
+
+	{# footer #}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

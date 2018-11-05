@@ -1,0 +1,78 @@
+// review
+.review
+    margin-top: 3rem
+    margin-bottom: 3rem
+    & .owl-stage-outer
+        margin-left: -1.75rem
+        margin-right: -1.75rem
+        padding-left: 1.75rem
+        +rmin($xs)
+            margin-left: 0
+            margin-right: 0
+            padding-left: 0
+    & .owl-nav
+        display: none
+    &__head
+        display: flex
+        justify-content: space-between
+        align-content: center
+        align-items: center
+        margin-bottom: 1rem
+        +rmin($xs)
+            padding-bottom: 1rem
+            border-bottom: 1px solid #cccccc    
+        & h2 
+            margin-bottom: 0
+        & a 
+            display: none
+            +rmin($xs)
+                display: block
+    &__item 
+        margin: 0.75rem 0
+        box-shadow: 0 0 15px 3px rgba(0,0,0,.05)
+        border: 1px solid #ededed
+        padding: 1rem 1rem 1.5rem 1rem
+        +rmin($xs)
+            padding: 0
+            box-shadow: none
+            margin: 0
+            border: 0
+    &__name 
+        font-size: 1.25rem
+        font-weight: 500
+        margin-bottom: 0.75rem
+    &__rating 
+        color: #aaaaaa
+        display: flex
+        align-items: center
+        align-content: center
+        font-size: 0.875rem
+        margin-bottom: 0.75rem
+        & span 
+            color: #16B81D
+            border: 2px solid #16B81D
+            border-radius: 50px
+            width: 1.5rem
+            height: 1.5rem
+            display: flex
+            margin-right: 0.5rem
+            align-content: center
+            align-items: center
+            text-align: center
+            justify-content: center
+            justify-items: center
+            font-weight: 500
+    &__content 
+        margin-bottom: 0.75rem
+        max-width: 100%
+        +rmin($md)
+            max-width: 75%
+    &__subtitle
+        font-size: 1rem
+        font-weight: 500
+    &__btn 
+        margin: 1rem auto 0
+        display: flex
+        justify-content: center
+        +rmin($xs)
+            display: none

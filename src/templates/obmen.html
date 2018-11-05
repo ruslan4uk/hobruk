@@ -1,0 +1,72 @@
+---
+title: Обмен и возврат
+category_class: list__category
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# top #}
+	{% include "partials/block/_top.html" %}
+
+	{# navigation #}
+	{% include "partials/block/_navigation.html" %}
+
+    <section class="head">
+        <div class="container">
+            {# breadcrumb #}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb--mt">
+                    <li class="breadcrumb__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb__item active" aria-current="page">Обмен и возврат товара</li>
+                </ol>
+            </nav>
+            <div class="title">Обмен и возврат товара</div>
+        </div>
+    </section>
+    
+    {# obmen #}
+    <section class="obmen">
+        <div class="container">
+            <div class="obmen__wrap">
+                <div class="obmen__item">
+                    <svg class="obmen__icon"><use xlink:href="img/sprite.svg#icon-obmen1"></use></svg>
+                    <div class="obmen__title">Упакуйте товар</div>
+                    <div class="obmen__descr">в оригинальную упаковку в полной комплектации</div>
+                </div>
+
+                <div class="obmen__item">
+                    <svg class="obmen__icon"><use xlink:href="img/sprite.svg#icon-obmen2"></use></svg>
+                    <div class="obmen__title">Заполните заявление</div>
+                    <div class="obmen__descr">о возврате, приложенное к заказу.</div>
+                </div>
+                
+                <div class="obmen__item">
+                    <svg class="obmen__icon"><use xlink:href="img/sprite.svg#icon-obmen3"></use></svg>
+                    <div class="obmen__title">Выберите способ возврата</div>
+                    <div class="obmen__descr">денежных средств (почтовый перевод или перечислением на банковский счет)</div>
+                </div>
+
+                <div class="obmen__item">
+                    <svg class="obmen__icon"><use xlink:href="img/sprite.svg#icon-obmen4"></use></svg>
+                    <div class="obmen__title">Вышлите посылку</div>
+                    <div class="obmen__descr">почтой по адресу: Энгельс, ул. Северная 13Б.</div>
+                </div>
+
+                <div class="obmen__item">
+                    <svg class="obmen__icon"><use xlink:href="img/sprite.svg#icon-obmen5"></use></svg>
+                    <div class="obmen__title">Напишите нам</div>
+                    <div class="obmen__descr">на электронную почту, что Вы отправили нам посылку</div>
+                </div>
+            </div>
+            <div class="obmen__btn">
+                <a href="" class="btn btn--purple">Основания для возврата и обмена товара</a>
+            </div>
+        </div>
+    </section>
+    
+
+	{# footer #}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

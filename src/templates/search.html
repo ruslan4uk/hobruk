@@ -1,0 +1,46 @@
+---
+title: Страница поиска
+product_class: list__product
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# top #}
+	{% include "partials/block/_top.html" %}
+
+	{# navigation #}
+	{% include "partials/block/_navigation.html" %}
+
+    <section class="head">
+        <div class="container">
+            {# breadcrumb #}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb--mt">
+                    <li class="breadcrumb__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb__item active" aria-current="page">Результаты поиска</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    {% include "partials/block/_filter.html" %}
+    
+	{# products #}
+	<section class="list">
+		<div class="container list__container">
+			<div class="list__wrap">
+			{% for i in [1,2,3,4,5] %}
+				{% include "partials/block/_product.html" %}
+			{% endfor %}
+			</div>
+			<div class="list__more">
+				<a href="" class="btn btn--more">Показать больше</a>
+			</div>
+		</div>
+	</section>
+
+	{# footer #}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

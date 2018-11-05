@@ -1,0 +1,224 @@
+---
+title: Каталог продукции
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# top #}
+	{% include "partials/block/_top.html" %}
+
+	{# navigation #}
+	{% include "partials/block/_navigation.html" %}
+
+    <section class="head">
+        <div class="container container--smp">
+            {# breadcrumb #}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb--mt">
+                    <li class="breadcrumb__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb__item"><a href="#">Картины по номерам</a></li>
+                    <li class="breadcrumb__item"><a href="#">Пейзажи</a></li>
+                    <li class="breadcrumb__item active" aria-current="page">Картина “Ежик на дереве”</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    
+    <section class="pcard">
+        <div class="container container--smp">
+            <div class="pcard__wrap">
+                <div class="pcard__mobile">
+                    <div class="pcard__title">Ежик на дереве</div>
+                    <div class="pcard__availability pcard__availability--availability">В наличии</div>
+                </div>
+                <div class="pcard__gallery">
+                    <img src="img/example/gallery.png" alt="">
+                    <p>Этим товаром за неделю заинтересовались 45 человек</p>
+                </div>
+                <div class="pcard__right">
+                    <div class="pcard__desctop">
+                        <div class="pcard__title">Ежик на дереве</div>
+                        <div class="pcard__availability pcard__availability--availability">В наличии</div>
+                    </div>
+                    <div class="pcard__frw">
+                        <div class="pcard__favorites icon">
+                            <svg class="icon__svg icon__svg--purple"><use xlink:href="img/sprite.svg#icon-favorites"></use></svg>
+                            <span class="icon__right">В избранное</span>
+                        </div>
+                        <div class="pcard__review icon">
+                            <svg class="icon__svg icon__svg--purple"><use xlink:href="img/sprite.svg#icon-review"></use></svg>
+                            <span class="icon__right">Отзывов пока нет</span>
+                        </div>
+                    </div>
+                    <div class="pcard__specifications specifications">
+                        <div class="specifications__group">
+                            <div class="specifications__left">Код</div>
+                            <div class="specifications__right">HS456S</div>
+                        </div>
+                        <div class="specifications__group">
+                            <div class="specifications__left">Размер</div>
+                            <div class="specifications__right">50х40 см</div>
+                        </div>
+                        <div class="specifications__group">
+                            <div class="specifications__left">Вес</div>
+                            <div class="specifications__right">1 кг</div>
+                        </div>
+                    </div>
+                    <div class="pcard__pcount">
+                        <div class="pcard__count">                           
+                            <input type="button" value="−" id="button_minus">
+                            <input type="text" step="1" min="1" max="10" id="num_count" name="quantity" value="1" title="Qty">
+                            <input type="button" value="+" id="button_plus">
+                        </div>
+                        <div class="pcard__price"><span>1019</span> ₽</div>
+                        <div class="pcard__oldprice"><span>1919</span> ₽</div>
+                    </div>
+                    <div class="pcard__bonus">Бонусных баллов: <span>1019</span> баллов</div>
+                    <div class="pcard__btns">
+                        <button type="submit" form="form1" class="btn btn--purple" value="Submit">+ Добавить в корзину</button>
+                        <a href="" class="btn btn--blue">Купить в один клик</a>
+                    </div>
+                    <div class="pcard__callback">
+                        Остались вопросы? У нас есть ответы!
+                        <a href="#" class="pcard__callback-link">Задать вопрос</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {# tabs #}
+
+        <div class="container">
+            <div class="pcard__tabs tabs">
+                <div class="tabs__list">
+                    <div class="tabs__item active" data-tabs-nav="1">Описание</div>
+                    <div class="tabs__item" data-tabs-nav="2">Отзывы <span>(1)</span></div>
+                    <div class="tabs__item" data-tabs-nav="3">Способы доставки</div>
+                </div>
+                <div class="tabs__content active"  data-tabs-content="1">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean 
+                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus 
+                    et magnis dis parturient montes, nascetur ridiculus mus. Donec quam 
+                    felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla 
+                    consequat massa quis enim. Donec pede justo, fringilla vel, aliquet 
+                    nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, 
+                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. 
+                    Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean 
+                    vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat 
+                    vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, 
+                    feugiat a, tellus.</p>
+                </div>
+                <div class="tabs__content"  data-tabs-content="2">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+                </div>
+                <div class="tabs__content"  data-tabs-content="3">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean 
+                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus 
+                    et magnis dis parturient montes, nascetur ridiculus mus. Donec quam 
+                    felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla 
+                    consequat massa quis enim. </p>
+                </div>
+            </div>
+        </div>
+
+        {#  #}
+        <div class="container">
+            <div class="pcard__advantages advantages">
+                <div class="advantages__wrap">
+                    <div class="advantages__item">
+                        <p>Нам доверяют</p>
+                        <div class="advantages__b">
+                            <p>32 000</p>
+                            <p>покупателей</p>
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <p>Лучшие цены - <br/>свое производство</p>
+                        <div class="advantages__b">                        
+                            <svg class="advantages__icon"><use xlink:href="img/sprite.svg#icon-pcardPrice"></use></svg>
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <p>Обмен-возврат в течение</p>
+                        <div class="advantages__b">
+                            <p>60</p>
+                            <p>дней</p>
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <p>Приятная бонусная система</p>
+                        <div class="advantages__b">                        
+                            <svg class="advantages__icon"><use xlink:href="img/sprite.svg#icon-pcardBonus"></use></svg>
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <p>Пятая картина в подарок</p>
+                        <div class="advantages__b">                        
+                            <svg class="advantages__icon"><use xlink:href="img/sprite.svg#icon-pcardSurprize"></use></svg>
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <p>Быстрая доставка. <br/>От 3000 ₽ - бесплатно</p>
+                        <div class="advantages__b">                        
+                            <svg class="advantages__icon"><use xlink:href="img/sprite.svg#icon-pcardDelivery"></use></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pcslider">
+        <div class="container container--smp">
+            <h2>С этим товаром покупают</h2>
+            <div class="pcslider__list pcslider__list--revers js--pcslider-product owl-carousel">
+                {% for i in [1,2,3,4] %}
+                    {% include "partials/block/_product.html" %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="pcslider">
+        <div class="container container--smp">
+            <h2>Картины в этой же категории</h2>
+            <div class="pcslider__list pcslider__height js--pcslider-product-width owl-carousel">
+
+                {% for i in [1,2,3,4] %}
+                    {% include "partials/block/_product.html" %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pcslider">
+        <div class="container container--smp">
+            <h2>С этим товаром покупают</h2>
+            <div class="pcslider__list js--pcslider-product owl-carousel">
+                {% for i in [1,2,3,4] %}
+                    {% include "partials/block/_category.html" %}
+                {% endfor %}
+            </div>
+            <div class="pcslider__more">
+				<a href="" class="btn btn--more">Все категории</a>
+			</div>
+        </div>
+    </section>
+
+    <section class="mtag">
+        <div class="container container--smp">
+            <h3>Похожие теги</h3>
+            <div class="mtag__wrap">
+                <div class="mtag__item"><a href="" class="mtag__link">Животные</a></div>
+                <div class="mtag__item"><a href="" class="mtag__link">Пейзажи</a></div>
+                <div class="mtag__item"><a href="" class="mtag__link">Море</a></div>
+            </div>
+        </div>
+    </section>
+
+	{# footer #}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

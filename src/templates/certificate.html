@@ -1,0 +1,68 @@
+---
+title: Сотрудничество с оптовыми покупателями
+category_class: list__category
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# top #}
+	{% include "partials/block/_top.html" %}
+
+	{# navigation #}
+	{% include "partials/block/_navigation.html" %}
+
+    <section class="head">
+        <div class="container">
+            {# breadcrumb #}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb--mt">
+                    <li class="breadcrumb__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb__item active" aria-current="page">Подарочный сертифкат</li>
+                </ol>
+            </nav>
+            <div class="title">Подарочный сертифкат</div>
+        </div>
+    </section>
+    
+    <section class="certificate">
+        <div class="container">
+            <p>Немного текста о том, как круто дарить людям сертификаты в наш магазин, <br />
+            и что здесь вы можете заказать подарочный сертификат в два клика</p>
+            <div class="certificate__wrap certificate__wrap--shadow">
+                <div class="certificate__left">
+                    <div class="certificate__img"></div>
+                </div>
+                <div class="certificate__right">
+                    <div class="certificate__form form">
+                        <h2 class="mb-2">Подарочный сертификат</h2>
+                        <div class="form__group">
+                            <label for="s1">От кого</label>
+                            <input type="text" name="" id="s1" class="form__input" placeholder="Введите имя отправителя" />
+                        </div>
+                        <div class="form__group">
+                            <label for="s2">Кому</label>
+                            <input type="text" name="" id="s2" class="form__input" placeholder="Введите имя получателя" />
+                        </div>
+                        <div class="form__group">
+                            <label for="s3">E-mail</label>
+                            <input type="text" name="" id="s3" class="form__input" placeholder="Введите почтовый ящик получателя" />
+                        </div>
+                        <div class="form__group">
+                            <label for="s4">Цена</label>
+                            <input type="text" name="" id="s4" class="form__input" placeholder="Введите желаемую стоимость" />
+                        </div>
+                        
+                        <div class="form__group form__group--center">
+                            <button type="submit" class="btn btn--purple certificate__btn">Оформить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	{# footer #}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

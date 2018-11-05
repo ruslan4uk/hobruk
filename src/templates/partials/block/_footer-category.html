@@ -1,0 +1,14 @@
+<section class="fcat">
+    <div class="container">
+        <div class="fcat__title">Категории</div>
+        <div class="fcat__wrap">
+            {# category data #}
+            {% import "../../data/data.html" as categoryes %}
+		    {% for category in categoryes.category %}
+            <div class="fcat__item">
+                <a href="" class="fcat__link">{{ category.title }}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

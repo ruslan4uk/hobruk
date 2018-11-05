@@ -1,0 +1,131 @@
+---
+title: Каталог продукции
+category_class: list__category
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# top #}
+	{% include "partials/block/_top.html" %}
+
+	{# navigation #}
+	{% include "partials/block/_navigation.html" %}
+
+    <section class="head">
+        <div class="container">
+            {# breadcrumb #}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb--mt">
+                    <li class="breadcrumb__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb__item active" aria-current="page">Картины по номерам</li>
+                </ol>
+            </nav>
+            <div class="title">Картины по фото</div>
+        </div>
+    </section>
+    
+    <section class="pti">
+        <div class="container">
+            <div class="pti__wrap">
+                <div class="pti__left">
+                    <p>Изготовим картину по ЛЮБОЙ вашей фотографии за 2-4 дня. В комплект 
+                    входят краски, 2 кисти и крепление на стену. Инструкции по заказу
+                    Изготовим картину по ЛЮБОЙ вашей фотографии за 2-4 дня. В комплект 
+                    входят краски, 2 кисти и крепление на стену. Инструкции по заказу
+                    Изготовим картину по ЛЮБОЙ вашей фотографии за 2-4 дня. В комплект 
+                    входят краски, 2 кисти и крепление на стену. В комплект входят 
+                    краски, 2 кисти и крепление на стену. Инструкции по заказу
+                    Изготовим картину по ЛЮБОЙ вашей фотографии за 2-4 дня. В комплект
+                    входят краски, 2 кисти и крепление на стену. В комплект входят краски, 
+                    2 кисти и крепление на стену.</p>
+                </div>
+                <div class="pti__right">
+                    <div class="pti__example">
+                        <div class="pti__example-item">
+                            <img src="img/example/pti.jpg" alt="" />
+                            <p>Оригинал</p>
+                        </div>
+                        <div class="pti__example-item">
+                            <img src="img/example/pti.jpg" alt="" />
+                            <p>Картина</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pti__order">
+                <div class="pti__form form">
+                    <h2>Закажите свое фото</h2>
+                    <div class="form__group">
+                        <label for="s1">Тип картины</label>
+                        <select name="" id="s1" class="form__select">
+                            <option value="">Портрет</option>
+                            <option value="">Портрет</option>
+                        </select>
+                    </div>
+                    <div class="form__group">
+                        <label for="s2">Размер картины</label>
+                        <select name="" id="s2" class="form__select">
+                            <option value="">Выберите...</option>
+                            <option value="">Выберите...</option>
+                        </select>
+                    </div>
+                    <div class="form__group">
+                        <label for="s1">Количество цветов</label>
+                        <select name="" id="s1" class="form__select">
+                            <option value="">Портрет</option>
+                            <option value="">Портрет</option>
+                        </select>
+                    </div>
+                    <div class="form__group">
+                        <label for="s1">Комментарий</label>
+                        <textarea name="" class="form__texarea" cols="20" rows="1" placeholder="Введите..."></textarea>
+                    </div>
+                    <div class="form__group">
+                        <button type="submit" class="btn btn--purple pti__btn">Заказать</button>
+                    </div>
+                </div>
+                <div class="pti__order-img">
+                    <img src="img/example/imgexample.png" alt="" />
+                    <p>Пример картины по фото</p>
+                </div>
+            </div>
+
+            {# pti portfolio #}
+            <div class="pti__portfolio">
+                <h2>Примеры наших работ</h2>
+                <div class="pti__slider js--pti-slider owl-carousel">
+                    {% for i in [1,2,3,4,5] %}
+                    <div class="pti__slider-item">
+                        <a href="#" class="pti__slider-link">
+                            <img src="img/example/pti-slider.jpg" alt="" />
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            {# review #}
+            <div class="pti__review review">
+                <div class="review__head">
+                    <h2>Отзывы</h2>
+                    <a href="" class="btn btn--purple">Оставить свой отзыв</a>
+                </div>
+                {# one review #}
+                <div class="js--pti-review owl-carousel">
+                    {% for i in [1,2,3] %}
+                        {% include "partials/block/_review.html" %}
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+	
+
+	{# footer #}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

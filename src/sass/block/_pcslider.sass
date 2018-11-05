@@ -1,0 +1,25 @@
+// pcslider
+.pcslider
+    overflow: hidden
+    margin-top: 2rem
+    & .owl-stage-outer
+        margin-left: -1.75rem
+        margin-right: -1.75rem
+        padding-left: 1.75rem
+        +rmin($xs)
+            margin-left: 0
+            margin-right: 0
+            padding-left: 0
+    &__list
+        &--revers
+            & .product__title,
+            & .product__price,
+            & .product__oldprice
+                color: #000000 !important
+    &__more
+        display: flex
+        flex-wrap: wrap
+        justify-items: center
+        justify-content: center
+        margin-bottom: 1rem
+        margin-top: 1.5rem

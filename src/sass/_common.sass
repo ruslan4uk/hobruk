@@ -1,0 +1,389 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&subset=cyrillic')
+
+// Breakpoints
+$xs: 576
+$sm: 768
+$md: 992
+$lg: 1200
+
+// colors
+$blue: #37ADCF
+$purple: #E62C76
+
+html
+    font-size: 14px
+    +rmin($xs)
+        font-size: 14px
+    +rmin($lg)
+        font-size: 16px
+
+body 
+	font-family: 'Rubik', sans-serif
+	font-weight: 400
+	font-size: 1rem
+	line-height: 1.4
+
+.container
+    width: 100%
+    max-width: 540px
+    margin: 0 auto
+    padding: 0 20px
+    +rmin($sm)
+        max-width: 720px
+    +rmin($md)
+        max-width: 960px
+    +rmin($lg)
+        max-width: 1170px
+    &--smp 
+        padding: 0 20px
+        +rmin($sm)
+            padding: 0 3rem
+
+// logo
+.logo
+	max-width: 10.5rem
+
+// General
+a 
+	text-decoration: none
+	+tr(all ease 0.3s)
+img 
+	max-width: 100%
+	font-size: 0
+	line-height: 0
+	display: block
+p 
+	margin-bottom: 1rem
+
+.mb-1
+	margin-bottom: 1rem
+.mb-2
+	margin-bottom: 2rem
+.mb-3
+	margin-bottom: 3rem
+.mb-4
+	margin-bottom: 4rem
+.mb-5
+	margin-bottom: 5rem
+
+// tipografia
+.title
+	font-size: 2rem
+	line-height: 1.2
+	font-weight: bold
+	color: #000000
+	margin-bottom: 1rem
+	+rmin($xs)
+		font-size: 3.125rem
+		line-height: 1.4
+.tdescr
+	font-size: 1rem
+	margin-bottom: 1rem
+
+h2 
+    font-size: 1.5rem
+    font-weight: 500
+    margin-bottom: 1rem
+
+h3 
+    font-size: 1.25rem
+    font-weight: 500
+    margin-bottom: 1rem
+
+
+//breadcrumbs
+.breadcrumb
+    display: flex
+    flex-wrap: wrap
+    &--mt 
+        margin-top: 2rem
+        margin-bottom: 1rem
+    &__item
+        margin-right: 1.5rem
+        color: rgba(0, 0, 0, 0.54)
+        font-size: 0.875rem
+        & a 
+            position: relative
+            color: rgba(0, 0, 0, 0.54)
+            +tr(all ease 0.2s)
+            &:hover
+                color: $blue
+            &:after
+                position: absolute
+                content: '/'
+                top: 0
+                right: -1rem
+
+
+// btn
+.btn
+	border: 0
+	line-height: 1.2 !important
+	outline: 0
+	white-space: nowrap
+	font-size: 1rem
+	text-align: center
+	display: inline-block
+	padding: 0.75rem 1.5rem
+	+tr(all ease 0.2s)
+	+rmin($md)
+		padding: 0.75rem 1.25rem
+		font-size: 1rem
+	&:hover
+		opacity: 0.75
+	&--more
+		color: #000000
+		border: 2px solid $blue
+		border-radius: 3px
+	&--ma 
+		margin: 0 auto
+	&--blue 
+		background: $blue
+		color: #ffffff
+	&--purple
+		background: $purple
+		color: #ffffff
+
+.icon
+	display: flex
+	align-items: center
+	font-weight: 500
+	&__svg
+		max-width: 1.5em
+		height: 1.5em
+		fill: #ffffff
+		&--purple
+			fill: $purple
+		&--blue 
+			fill: $blue
+		&--arr 
+			max-width: 0.75em
+			height: 0.75em
+			margin-left: 0.5rem
+	&__right
+		margin-left: 0.5rem
+
+
+
+// serch form
+.search
+	display: flex
+	align-items: center
+	position: relative
+	&__input
+		padding: 0.5rem 0.5rem 0.5rem 3rem
+		border-radius: 5px
+		border: 1px solid #cccccc
+		font-size: 1rem
+		width: 100%
+		+tr(all ease 0.3s)
+		&:hover, &:focus
+			border-color: #000000
+	&__btn
+		background-image: url(../img/general/search.svg)
+		background-color: transparent
+		background-size: contain
+		width: 1.325rem
+		height: 1.325rem
+		position: absolute
+		top: 0.45rem
+		left: 1rem
+
+// list
+.list
+    margin-top: 1rem
+    margin-bottom: 3rem
+    &--mt0 
+        margin-top: 0
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        margin-left: -1rem
+        margin-right: -1rem
+    &__container
+        padding: 0
+        +rmin($xs)
+            padding: 0 20px
+    &__more
+        margin-top: 1.5rem
+        text-align: center
+    &__product
+        margin: 0.75rem 1rem
+        width: 100%
+        +rmin($xs)
+            width: calc(50% - 2rem)
+            margin: 1rem 1rem
+        +rmin($md)
+            width: calc(33.333333% - 2rem)
+    &__category
+        margin: 0.75rem 1rem
+        +rmin($xs)
+            width: calc(50% - 2rem)
+            margin: 1rem 1rem
+        +rmin($md)
+            width: calc(33.333333% - 2rem)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// footer category
+.fcat
+	margin-top: 2rem
+	margin-bottom: 2rem
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__title
+		font-size: 1.5rem
+		font-weight: bold
+		margin-bottom: 1rem
+	&__item
+		width: 50%
+		+rmin($sm)
+			width: 25%
+	&__link 
+		max-width: 10.5rem
+		font-size: 0.875rem
+		width: 100%
+		padding: 0.325rem 0.5rem
+		background: #FAFAFA
+		margin-bottom: 1.5rem
+		display: inline-block
+		color: #444444
+		text-align: center
+		border: 1px solid rgba(0, 0, 0, 0.1)
+		+tr(all ease 0.3s)
+		&:hover
+			background: #ffffff
+
+
+// social
+.social
+	&__wrap
+		display: flex
+		align-items: center
+	&__item
+		margin-right: 1rem
+		&:last-child
+			margin-right: 0
+	&__link
+		fill: #444444
+		+tr(all ease 0.2s)
+		&:hover
+			opacity: 0.7
+	&__svg
+		width: 2rem
+		height: 2rem
+
+// form
+.form
+	&__group
+		margin-bottom: 1.5rem
+		&--center 
+			text-align: center
+		& label
+			font-size: 0.875rem
+			color: rgba(0, 0, 0, 0.38)
+			width: 100%
+			margin-bottom: 0.25rem
+			display: block
+		& input[type=text]
+			padding: 0.375em 0.75em
+			border-bottom: 1px solid #cccccc
+			background: transparent
+			font-size: 0.875em
+			width: 100%
+			+tr(all ease 0.3s)
+			&:hover,&:focus
+				color: #000000
+				border-bottom: 1px solid #000000
+		& select 
+			width: 100%
+			background: transparent
+			font-size: 1rem
+			-webkit-appearance: none
+			-moz-appearance: none
+			appearance: none
+			padding: 0.75rem 0
+			display: block
+			border: 0
+			border-radius: 0
+			color: #aaaaaa
+			border-bottom: 1px solid #aaaaaa
+			position: relative
+			background-image: url(../img/general/arr.svg)
+			background-repeat: no-repeat
+			background-position: center right 1rem
+			+tr(all ease 0.2s)
+			&:hover,&:focus
+				color: #000000
+				border-bottom: 1px solid #000000
+		// textarea
+		& textarea
+			width: 100%
+			background: transparent
+			font-size: 1rem
+			-webkit-appearance: none
+			-moz-appearance: none
+			appearance: none
+			padding: 0.75rem 0
+			display: block
+			border: 0
+			border-radius: 0
+			color: #aaaaaa
+			border-bottom: 1px solid #aaaaaa
+			&::placeholder
+				color: #aaaaaa
+				+tr(all ease 0.2s)
+			&:hover::placeholder,&:focus::placeholder,
+			&:hover::placeholder,&:focus::placeholder
+				color: #000000
+			&:hover,&:focus
+				border-bottom: 1px solid #000000
+				color: #000000
+
+
+// table
+.table
+	overflow-x: scroll 
+	&--mlr 
+		+rmin($md)
+			margin-left: -1rem
+			margin-right: -1rem
+	&__grid
+		table-layout: fixed
+		width: 100%
+		border: 1px solid #dedede
+		min-width: 50rem
+	&__title
+		width: 13rem
+	& thead 
+		background: rgba(55,173,207,.2)
+		& td
+			padding: 1.5rem 1rem
+			font-weight: 500
+	
+	& tbody
+		& strong
+			font-weight: 500
+		& td
+			padding: 0.75rem 1rem
+		& tr:first-child td
+			padding-top: 1.5rem
+		& tr:last-child td
+			padding-bottom: 1.5rem

@@ -1,0 +1,217 @@
+// product card (tovar)
+.pcard
+    &__wrap
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__gallery
+        width: 100%
+        margin-top: 1rem
+        +rmin($md)
+            width: 60%
+        & img  // TODO: delete
+            width: 100%
+        & p
+            font-size: 0.875rem
+            color: $blue 
+            opacity: 0.54
+            margin-top: 0.75rem
+    &__right
+        width: 100%
+        margin-top: 1rem
+        +rmin($md)
+            width: calc(40% - 2rem)
+
+
+    &__mobile
+        display: block 
+        +rmin($md)
+            display: none
+    &__desctop
+        display: none
+        +rmin($md)
+            display: block
+
+    
+    // right side
+    &__title
+        font-size: 1.5rem
+        font-weight: bold 
+        color: #000000
+        margin-bottom: 0.5rem
+    &__availability
+        color: red 
+        font-size: 0.875rem
+        &--availability
+            color: #27AE60
+    &__frw
+        display: flex
+        margin-top: 1rem
+    &__favorites
+        margin-right: 2rem
+    &__favorites span, &__review span 
+        font-size: 0.875rem
+        font-weight: 400
+
+    // count and price block
+    &__pcount
+        margin-top: 1.75rem
+        display: flex
+        align-items: center
+        align-content: center
+    &__count
+        display: flex
+        align-content: center
+        align-items: center
+        & input[type=button]
+            color: $blue
+            font-size: 2rem
+            font-weight: 300
+            line-height: 1
+            background: none
+            margin-bottom: 0.25rem
+        & input[type=text]
+            font-size: 1rem
+            text-align: center
+            max-width: 2rem
+
+    // price
+    &__price
+        font-size: 2rem
+        font-weight: 500
+        margin-left: 2.5rem
+    &__oldprice
+        font-size: 0.875rem
+        color: rgba(0, 0, 0, 0.38)
+        text-decoration: line-through
+        margin-left: 2.5rem
+
+    &__bonus
+        color: $blue
+        font-size: 1rem
+        margin-top: 1rem
+    &__btns
+        display: flex
+        margin-top: 1rem
+        & .btn
+            width: calc(50% - 0.5rem)
+            font-size: 0.8rem
+            padding: 0.75rem 1rem
+            &:last-child
+                margin-left: 1rem
+    
+    &__callback
+        font-size: 0.825rem
+        margin-top: 1rem
+        text-align: center
+        +rmin($md)
+            text-align: left
+        &-link 
+            color: $purple
+            font-size: 1rem
+            margin-left: 1rem
+            text-decoration: underline
+            display: block
+            text-align: center
+            +rmin($md)
+                display: inline-block
+
+
+    // tabs
+    &__tabs
+        box-shadow: 0 4px 6px 2px rgba(0,0,0,.075)
+        margin-top: 2rem
+    &__advantages
+        box-shadow: 0 0 6px 2px rgba(0,0,0,.075)
+        margin-top: 2rem
+        //padding: 0 2rem
+
+
+                
+// advantages
+.advantages
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+    &__item
+        width: 50%
+        padding: 1rem
+        text-align: center
+        font-size: 0.875rem
+        +rmin($md)
+            width: 16.6666667%
+        & > p
+            height: 2rem
+            display: flex
+            align-content: center
+            align-items: center
+            justify-content: center
+    &__b
+        margin-top: 1rem
+        text-align: center
+        & p:first-child
+            color: $purple
+            font-size: 1.5rem
+            font-weight: 400
+        & p:last-child
+            color: $purple
+            font-size: 0.75rem
+            font-weight: 400
+    &__icon
+        fill: $purple
+        height: 2.5rem
+        width: 3rem
+
+
+// specifications
+.specifications
+    margin-top: 1.5rem
+    &__group
+        display: flex
+        justify-content: space-between
+        font-size: 0.875rem
+        margin-bottom: 0.75rem
+        position: relative
+        &:after
+            content: ' '
+            background: #cccccc
+            position: absolute
+            bottom: 4px
+            width: 100%
+            height: 1px
+    &__left
+        padding-right: 0.5rem
+        background: #ffffff
+        position: relative
+        z-index: 2
+    &__right 
+        width: 6rem
+        padding-left: 0.5rem
+        background: #ffffff
+        position: relative
+        z-index: 2
+
+// mtag
+.mtag
+    margin-top: 2rem
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+    &__item
+        margin-right: 1rem
+        margin-bottom: 1rem
+    &__link
+        max-width: 10.5rem
+        font-size: 0.875rem
+        width: 100%
+        padding: 0.325rem 1rem
+        border-radius: 3px
+        background: #FAFAFA
+        margin-bottom: 1.5rem
+        display: inline-block
+        color: #444444
+        text-align: center
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        +tr(all ease 0.3s)
+        &:hover
+            background: #ffffff

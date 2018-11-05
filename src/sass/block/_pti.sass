@@ -1,0 +1,101 @@
+// photo to image
+.pti
+    overflow: hidden
+    +rmin($md)
+        margin-top: -1.5rem
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column-reverse
+        justify-content: space-between
+        align-items: center
+        +rmin($md)
+            flex-direction: row
+    &__left
+        width: 100%
+        +rmin($md)
+            width: calc(58% - 6rem)
+        p
+            line-height: 1.5
+    &__right
+        width: 100%
+        +rmin($md)
+            width: 42%
+    &__example
+        box-shadow: 0 0 15px 3px rgba(0,0,0,.05)
+        display: flex
+        padding: 0 1rem
+        margin-bottom: 2rem
+        +rmin($md)
+            margin-bottom: 0
+        &-item 
+            padding: 1.5rem 1rem 1rem
+            text-align: center
+            & p 
+                opacity: 0.54
+                margin-top: 0.5rem
+    // order
+    &__order
+        box-shadow: 0 0 15px 3px rgba(0,0,0,.05)
+        margin-top: 2rem
+        padding: 1.5rem 1rem 0.5rem 1rem
+        display: flex
+        justify-content: space-between
+        +rmin($md)
+            margin-left: -2rem
+            margin-right: -2rem
+            padding: 2rem
+        &-img 
+            width: calc(55% - 3rem)
+            display: none
+            +rmin($md)
+                display: block
+            & p 
+                opacity: 0.38
+                margin-top: 0.25rem
+                margin-bottom: 0
+                text-align: center
+    &__form
+        width: 100%
+        +rmin($md)
+            width: calc(45% - 3rem)
+    &__btn 
+        min-width: 50%
+    
+
+    // portfolio
+    &__portfolio
+        margin-top: 3rem
+        & .owl-stage-outer
+            margin-left: -1.75rem
+            margin-right: -1.75rem
+            padding-left: 1.75rem
+            +rmin($xs)
+                margin-left: 0
+                margin-right: 0
+                padding-left: 0
+        & .owl-nav
+            +rmin($sm)
+                display: block !important
+            & .owl-prev, & .owl-next 
+                position: absolute
+                top: calc(50% - 1.5rem)
+                left: -3.5rem
+                background-image: url(../img/general/sliderArr.svg) !important
+                background-repeat: no-repeat !important
+                background-position: center center !important
+                background-size: contain !important
+                width: 2rem
+                height: 2rem
+                display: block
+                +tr(all ease 0.2s)
+                &:hover
+                    opacity: 0.75
+                & span 
+                    display: none
+            & .owl-next
+                right: -3.5rem
+                left: auto
+                transform: rotate(180deg)
+
+    

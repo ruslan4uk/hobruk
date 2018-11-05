@@ -1,0 +1,76 @@
+.filter
+    margin-top: 1.5rem
+    margin-bottom: -0.5rem
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__search
+        width: 100%
+        +rmin($sm)
+            width: 50%
+        +rmin($md)
+            width: 60%
+        & .search__input
+       		padding: 0.75rem 0.75rem 0.75rem 3rem
+        & .search__btn
+            top: 0.75rem
+    
+    // filter item
+    &__item
+        margin-top: 1.25rem
+        padding: 0.5rem 0.5rem
+        justify-content: center
+        border: 1px solid #cccccc
+        display: flex
+        align-items: center
+        align-content: center
+        width: calc(16.66666667% - 1rem)
+        cursor: pointer
+        +rmin($md)
+            padding: 0.5rem 0.25rem 0.5rem 1rem
+            width: calc(20% - 1rem)
+            justify-content: flex-start
+        &--sort 
+            +rmin($sm)
+                display: none
+    &__svg
+        width: 1.25rem
+        height: 1.25rem
+        fill: rgba(0, 0, 0, 0.38)
+    &__right
+        color: rgba(0, 0, 0, 0.38)
+        font-size: 0.875rem
+        margin-left: 0.5rem
+        display: none
+        +rmin($md) 
+            display: block
+        
+
+
+
+
+// filter sort
+.sort
+    display: none
+    +rmin($sm)
+        display: block
+    &__wrap
+        display: flex
+        align-content: center
+        align-items: center
+    &__name
+        display: flex
+        font-size: 0.875rem
+        color: #cccccc
+        fill: #cccccc
+    &__svg
+        width: 1rem
+        height: 1rem
+        margin-right: 0.5rem
+    &__link
+        margin-left: 1rem
+        color: #cccccc
+        font-size: 0.875rem
+        &:hover, &.active
+            color: $blue

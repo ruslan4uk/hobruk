@@ -1,0 +1,107 @@
+.delivery
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        &--mb 
+            margin-bottom: 2rem
+        &--left 
+            justify-content: flex-start
+    &__item
+        width: 100%
+        border: 1px solid #dedede
+        padding: 2.5rem 1.5rem
+        display: flex
+        flex-wrap: wrap
+        text-align: center
+        box-shadow: 0 0 15px 3px rgba(0,0,0,.05)
+        margin-top: 0.25rem
+        margin-bottom: 1rem
+        +rmin($md)
+            width: calc(33.333% - 1rem)
+        +rmin($lg)
+            padding: 2.5rem
+        &:last-child
+            width: 100%
+            +rmin($md)
+                width: calc(33.333% - 1rem)
+        &--center 
+            justify-content: center
+            justify-items: center
+    &__icon
+        max-width: 7rem
+        max-height: 5rem
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 1rem
+        fill: $blue
+    &__subtext
+        width: 100%
+        & strong 
+            font-weight: 500
+
+
+    // card
+    &__card
+        margin-top: 0.25rem
+        margin-bottom: 1rem
+        width: 100%
+        box-shadow: 0 0 15px 3px rgba(0,0,0,.05)
+        border: 1px solid #dedede
+        +rmin($sm) 
+            width: calc(50% - 1rem)
+        &-header
+            padding: 1rem 1rem
+            font-size: 1.125rem
+            font-weight: 500
+            color: #ffffff
+            background: $blue
+        &-content 
+            padding: 1rem 1rem 0
+            & p 
+                margin-bottom: 1rem
+            & strong
+                font-weight: 500
+
+    // delivery company
+    &__company
+        margin-bottom: 1rem
+        margin-right: 3rem
+        & img 
+            height: 4.375rem
+            filter: grayscale(1)
+            opacity: 0.75
+            +tr(all ease 0.3s)
+        &:hover img 
+            filter: grayscale(0)
+            opacity: 1
+
+        
+    // pay
+    &__pay
+        width: 100%
+        border: 1px solid #dedede
+        padding: 1.5rem
+        display: flex
+        flex-wrap: wrap
+        text-align: center
+        box-shadow: 0 0 15px 3px rgba(0,0,0,.05)
+        margin-top: 0.25rem
+        margin-bottom: 1rem
+        justify-content: center
+        justify-items: center
+        +rmin($sm)
+            width: calc(50% - 1rem)
+        +rmin($md)
+            width: calc(33.333% - 1rem)
+        &-text 
+            font-size: 0.875rem
+        &-title 
+            font-weight: 500
+            font-size: 1rem
+            margin-bottom: 0.5rem
+        &:nth-child(4),&:nth-child(5)
+            width: 100%
+            +rmin($md)
+                width: calc(50% - 1rem)
+            
