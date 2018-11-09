@@ -24,6 +24,10 @@ body
 	font-size: 1rem
 	line-height: 1.4
 
+section 
+	overflow: hidden
+
+
 .container
     width: 100%
     max-width: 540px
@@ -91,6 +95,11 @@ h3
     font-weight: 500
     margin-bottom: 1rem
 
+h4
+    font-size: 1.125rem
+    font-weight: 500
+    margin-bottom: 1rem
+
 
 //breadcrumbs
 .breadcrumb
@@ -119,6 +128,7 @@ h3
 // btn
 .btn
 	border: 0
+	border-radius: 3px
 	line-height: 1.2 !important
 	outline: 0
 	white-space: nowrap
@@ -144,6 +154,24 @@ h3
 	&--purple
 		background: $purple
 		color: #ffffff
+	&--ok 
+		background: #F2720C
+		color: #ffffff !important
+		text-decoration: none !important
+		font-weight: normal !important
+		padding: 0.5rem 1rem 0.5rem 2.5rem !important
+		background-image: url(../img/general/ok.svg)
+		background-repeat: no-repeat !important
+		background-position: 0.875rem center !important
+	&--vk 
+		background: #356396
+		color: #ffffff !important
+		text-decoration: none !important
+		font-weight: normal !important
+		padding: 0.5rem 1rem 0.5rem 2.5rem !important
+		background-image: url(../img/general/vk.svg)
+		background-repeat: no-repeat !important
+		background-position: 0.875rem center !important
 
 .icon
 	display: flex
@@ -294,6 +322,7 @@ h3
 .form
 	&__group
 		margin-bottom: 1.5rem
+		position: relative
 		&--center 
 			text-align: center
 		& label
@@ -313,6 +342,7 @@ h3
 				color: #000000
 				border-bottom: 1px solid #000000
 		& select 
+			position: relative
 			width: 100%
 			background: transparent
 			font-size: 1rem
@@ -333,6 +363,15 @@ h3
 			&:hover,&:focus
 				color: #000000
 				border-bottom: 1px solid #000000
+		& select + .form__select-arr
+			position: absolute
+			bottom: 0.5rem
+			right: 0.75rem
+			width: 1.5rem
+			height: 1.5rem
+			background-image: url(../img/general/selectArr.svg)
+			background-repeat: no-repeat
+			background-position: center center
 		// textarea
 		& textarea
 			width: 100%

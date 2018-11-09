@@ -1,5 +1,5 @@
-import sayHello from "./lib/sayHello.js";
 import "jquery";
+import sayHello from "./lib/sayHello.js";
 import "owl.carousel";
 
 sayHello();
@@ -7,6 +7,25 @@ sayHello();
 function stopDefAction(evt) {
   evt.preventDefault();
 }
+
+// contact more map btn
+$(document).on("click", ".js--contact-more", function(e) {
+  //console.log($(this));
+  let map = $(this)
+    .parent()
+    .parent()
+    .find(".contact__more-map");
+  if ($(this).hasClass("active")) {
+    $(this).removeClass("active");
+    map.slideUp();
+    $(this).text("Смотреть на карте");
+  } else {
+    $(this).addClass("active");
+    map.slideDown();
+    $(this).text("Свернуть");
+  }
+  console.log(map);
+});
 
 // pti review carousel
 $(".js--pti-review").owlCarousel({
@@ -122,16 +141,18 @@ $(document).on("click", "[data-tabs-nav]", function() {
 });
 
 // plus and minus button
-var numCount = document.getElementById("num_count");
-var plusBtn = document.getElementById("button_plus");
-var minusBtn = document.getElementById("button_minus");
-plusBtn.onclick = function() {
-  var qty = parseInt(numCount.value);
-  qty = qty + 1;
-  numCount.value = qty;
-};
-minusBtn.onclick = function() {
-  var qty = parseInt(numCount.value);
-  qty = qty - 1;
-  numCount.value = qty;
-};
+if ($("#num_count").length > 0) {
+  var numCount = document.getElementById("num_count");
+  var plusBtn = document.getElementById("button_plus");
+  var minusBtn = document.getElementById("button_minus");
+  plusBtn.onclick = function() {
+    var qty = parseInt(numCount.value);
+    qty = qty + 1;
+    numCount.value = qty;
+  };
+  minusBtn.onclick = function() {
+    var qty = parseInt(numCount.value);
+    qty = qty - 1;
+    numCount.value = qty;
+  };
+}

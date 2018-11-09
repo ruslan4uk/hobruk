@@ -1,0 +1,65 @@
+---
+title: Каталог продукции
+category_class: list__category
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# top #}
+	{% include "partials/block/_top.html" %}
+
+	{# navigation #}
+	{% include "partials/block/_navigation.html" %}
+
+    <section class="head">
+        <div class="container">
+            {# breadcrumb #}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb--mt">
+                    <li class="breadcrumb__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb__item active" aria-current="page">Контакты</li>
+                </ol>
+            </nav>
+            <div class="title">Контакты</div>
+        </div>
+    </section>
+    
+    <section class="contact">
+        <div class="container">
+            <div class="contact__wrap">
+                <div class="contact__map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aef61eca66be4954420fdaf6492493905f105e98d93ac12b0179c47c769949164&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <div class="contact__overlay">
+                        <p>Адрес:<br />г. Энгельс, ул. Северная 13 Б</p>
+                        <p>Режим работы:<br />Пн-Пт 9.00 - 18.00</p>
+                        <p>Телефон:<br />+7 (499) 350 97 00</p>
+                        <p>Общие вопросы:<br />info@hobbyshop-ru.ru</p>
+                        <p>Розничные клиенты:<br />sales@hobbyshop-ru.ru</p>
+                        <p>Оптовые клиенты:<br />opt@hobbyshop-ru.ru</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="mt-2">Пункты самовывоза</h2>
+            <div class="contact__wrap">
+                {% for i in [1,2,3,4,5] %}
+                <div class="contact__item">
+                    <div class="contact__contact">
+                        <div class="contact__city">Энгельс</div>
+                        <div class="contact__adress">ул. Северная, 13 Б</div>
+                        <div class="contact__phone">8 (999) 999-99-99</div>
+                        <div class="contact__more js--contact-more">Смотреть на карте</div>
+                    </div>
+                    <div class="contact__more-map">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aef61eca66be4954420fdaf6492493905f105e98d93ac12b0179c47c769949164&amp;width=100%25&amp;height=200&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+	{# footer #}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

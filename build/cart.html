@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Каталог продукции</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <section class="top">
+      <div class="container">
+        <div class="top__wrap">
+          <a href="#" class="logo"><img src="img/general/logo.svg" /></a>
+          <div class="top__search search">
+            <input type="text" class="search__input" placeholder="Поиск" />
+            <input type="button" value="" class="search__btn" />
+          </div>
+          <div class="top__btns">
+            <div class="top__iblock icon">
+              <svg class="icon__svg icon__svg--blue">
+                <use xlink:href="img/sprite.svg#icon-profile"></use>
+              </svg>
+              <svg class="icon__svg icon__svg--blue icon__svg--arr">
+                <use xlink:href="img/sprite.svg#icon-arr"></use>
+              </svg>
+            </div>
+            <div class="top__iblock icon">
+              <svg class="icon__svg icon__svg--purple">
+                <use xlink:href="img/sprite.svg#icon-favorites"></use>
+              </svg>
+              <span class="icon__right">(2)</span>
+            </div>
+            <div class="top__iblock top__iblock--pr0 icon">
+              <svg class="icon__svg icon__svg--blue">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="icon__right">1432P</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="navigation">
+      <div class="container">
+        <div class="navigation__wrap">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="catalog.html" class="navigation__link">Картины по номерам</a></li>
+            <li class="navigation__item"><a href="photo-to-image.html" class="navigation__link">Картины по фото</a></li>
+            <li class="navigation__item"><a href="" class="navigation__link">Аксессуары</a></li>
+            <li class="navigation__item"><a href="delivery.html" class="navigation__link">Доставка и оплата</a></li>
+            <li class="navigation__item"><a href="obmen.html" class="navigation__link">Возврат</a></li>
+            <li class="navigation__item"><a href="opt.html" class="navigation__link">Оптовые покупатели</a></li>
+            <li class="navigation__item"><a href="certificate.html" class="navigation__link">Подарочные сертификаты</a></li>
+            <li class="navigation__item"><a href="" class="navigation__link">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="head">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb--mt">
+            <li class="breadcrumb__item"><a href="#">Главная</a></li>
+            <li class="breadcrumb__item active" aria-current="page">Корзина</li>
+          </ol>
+        </nav>
+        <div class="title">Корзина</div>
+      </div>
+    </section>
+    <section class="cart">
+      <div class="container">
+        <div class="cart__wrap">
+          <div class="cart__to-right">
+            <a href="#" class="cart__clear">Очистить корзину</a>
+          </div>
+          <div class="cart__table">
+            <div class="cart__htable">
+              <div class="cart__row">
+                <div class="cart__col cart__img"></div>
+                <div class="cart__col cart__name"></div>
+                <div class="cart__col cart__htitle cart__cprice">Цена за 1 ед.</div>
+                <div class="cart__col cart__htitle cart__count">Кол-во</div>
+                <div class="cart__col cart__htitle cart__price">Итого</div>
+              </div>
+            </div>
+            <div class="cart__hbody">
+              <div class="cart__row">
+                <div class="cart__col cart__img"><img src="img/example/product.png" alt=""></div>
+                <div class="cart__col cart__name">
+                  <div class="cart__title">Ежик на дереве</div>
+                  <div class="cart__d">Код: HS456</div>
+                  <div class="cart__d">Цена в баллах: <strong>1090 баллов</strong></div>
+                </div>
+                <div class="cart__col cart__cprice">2564 ₽ (<span>4564 Р</span>)</div>
+                <div class="cart__deliver"></div>
+                <div class="cart__col cart__count">
+                  <div class="pcard__count">
+                    <input type="button" value="−" id="button_minus" />
+                    <input type="text" step="1" min="1" max="10" id="num_count" name="quantity" value="1" title="Qty" />
+                    <input type="button" value="+" id="button_plus" />
+                  </div>
+                </div>
+                <div class="cart__col cart__price">9128 ₽</div>
+                <a href="" class="cart__delete">
+                  <img src="img/general/cartDelete.svg" alt="">
+                </a>
+              </div>
+              <div class="cart__row">
+                <div class="cart__col cart__img"><img src="img/example/product.png" alt=""></div>
+                <div class="cart__col cart__name">
+                  <div class="cart__title">Ежик на дереве</div>
+                  <div class="cart__d">Код: HS456</div>
+                  <div class="cart__d">Цена в баллах: <strong>1090 баллов</strong></div>
+                </div>
+                <div class="cart__col cart__cprice">2564 ₽ (<span>4564 Р</span>)</div>
+                <div class="cart__deliver"></div>
+                <div class="cart__col cart__count">
+                  <div class="pcard__count">
+                    <input type="button" value="−" id="button_minus" />
+                    <input type="text" step="1" min="1" max="10" id="num_count" name="quantity" value="1" title="Qty" />
+                    <input type="button" value="+" id="button_plus" />
+                  </div>
+                </div>
+                <div class="cart__col cart__price">9128 ₽</div>
+                <a href="" class="cart__delete">
+                  <img src="img/general/cartDelete.svg" alt="">
+                </a>
+              </div>
+              <div class="cart__row">
+                <div class="cart__col cart__img"><img src="img/example/product.png" alt=""></div>
+                <div class="cart__col cart__name">
+                  <div class="cart__title">Ежик на дереве</div>
+                  <div class="cart__d">Код: HS456</div>
+                  <div class="cart__d">Цена в баллах: <strong>1090 баллов</strong></div>
+                </div>
+                <div class="cart__col cart__cprice">2564 ₽ (<span>4564 Р</span>)</div>
+                <div class="cart__deliver"></div>
+                <div class="cart__col cart__count">
+                  <div class="pcard__count">
+                    <input type="button" value="−" id="button_minus" />
+                    <input type="text" step="1" min="1" max="10" id="num_count" name="quantity" value="1" title="Qty" />
+                    <input type="button" value="+" id="button_plus" />
+                  </div>
+                </div>
+                <div class="cart__col cart__price">9128 ₽</div>
+                <a href="" class="cart__delete">
+                  <img src="img/general/cartDelete.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart__footer">
+          <div class="cart__promo">
+            <form action="" class="form">
+              <div class="form__group">
+                <input type="text" class="form__input" placeholder="Код подарочного сертификата">
+              </div>
+            </form>
+          </div>
+          <div class="cart__total">Итого: <span>1890 руб</span></div>
+        </div>
+        <div class="cart__btn-group">
+          <a href="" class="btn btn--blue">Купить в один клик</a>
+          <a href="" class="btn btn--purple">Оформить заказ</a>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__col">
+            <div class="footer__title footer__title--border">Карта сайта</div>
+            <ul class="footer__list">
+              <li class="footer__item"><a href="" class="footer__link">Картины по номерам</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Картины по фото</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Аксессуары</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Доставка и оплата</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Возврат</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Оптовые покупатели</a></li>
+              <li class="footer__item"><a href="" class="footer__link">Подарочные сертификаты</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title footer__title--border">Контакты</div>
+            <div class="footer__adress">
+              <p>Адрес:</p>
+              <p>г. Энгельс, ул. Северная 13 Б</p>
+              <p>Пн-Пт 9.00 - 18.00</p>
+            </div>
+            <div class="footer__adress">
+              <p>Телефон:</p>
+              <p>+7 (499) 350 97 00</p>
+            </div>
+            <div class="footer__adress">
+              <p>E-mail:</p>
+              <p>info@hobbyshop-ru.ru</p>
+            </div>
+          </div>
+          <div class="footer__col footer__col--subscribe">
+            <div class="footer__title">Подпишитесь на наши новости и получите купон на скидку 10%</div>
+            <form action="" class="footer__form form">
+              <div class="form__group"><input type="text" placeholder="Введите e-mail" class="form__input" /></div>
+              <div class="form__group"><input type="submit" value="Подписаться" class="btn btn--blue" /></div>
+            </form>
+            <div class="footer__social social">
+              <div class="social__wrap">
+                <div class="social__item">
+                  <a href="" class="social__link">
+                    <svg class="social__svg">
+                      <use xlink:href="img/sprite.svg#icon-socialInst"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="social__item">
+                  <a href="" class="social__link">
+                    <svg class="social__svg">
+                      <use xlink:href="img/sprite.svg#icon-socialVk"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="copyright">
+      <p>Политика конфиденциальности</p>
+      <p>Copyright © 2018</p>
+    </section>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

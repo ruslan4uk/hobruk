@@ -1,0 +1,94 @@
+---
+title: Каталог продукции
+category_class: list__category
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# top #}
+	{% include "partials/block/_top.html" %}
+
+	{# navigation #}
+	{% include "partials/block/_navigation.html" %}
+
+    <section class="head">
+        <div class="container">
+            {# breadcrumb #}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb--mt">
+                    <li class="breadcrumb__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb__item active" aria-current="page">Корзина</li>
+                </ol>
+            </nav>
+            <div class="title">Корзина</div>
+        </div>
+    </section>
+    
+    <section class="cart">
+        <div class="container">
+            <div class="cart__wrap">
+                <div class="cart__to-right">
+                    <a href="#" class="cart__clear">Очистить корзину</a>
+                </div>
+
+                <div class="cart__table">
+                    <div class="cart__htable">
+                        <div class="cart__row">
+                            <div class="cart__col cart__img"></div>
+                            <div class="cart__col cart__name"></div>
+                            <div class="cart__col cart__htitle cart__cprice">Цена за 1 ед.</div>
+                            <div class="cart__col cart__htitle cart__count">Кол-во</div>
+                            <div class="cart__col cart__htitle cart__price">Итого</div>
+                        </div>
+                    </div>
+                    <div class="cart__hbody">
+                        {% for i in [1,2,3] %}
+                        <div class="cart__row">
+                            <div class="cart__col cart__img"><img src="img/example/product.png" alt=""></div>
+                            <div class="cart__col cart__name">
+                                <div class="cart__title">Ежик на дереве</div>
+                                <div class="cart__d">Код: HS456</div>
+                                <div class="cart__d">Цена в баллах: <strong>1090 баллов</strong></div>
+                            </div>
+                            <div class="cart__col cart__cprice">2564  ₽ (<span>4564 Р</span>)</div>
+                            <div class="cart__deliver"></div>
+                            <div class="cart__col cart__count">
+                                <div class="pcard__count">                           
+                                    <input type="button" value="−" id="button_minus" />
+                                    <input type="text" step="1" min="1" max="10" id="num_count" name="quantity" value="1" title="Qty" />
+                                    <input type="button" value="+" id="button_plus" />
+                                </div>
+                            </div>
+                            <div class="cart__col cart__price">9128 ₽</div>
+                            <a href="" class="cart__delete">
+                                <img src="img/general/cartDelete.svg" alt="">
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>  
+            </div>
+
+            {# cart footer #}
+            <div class="cart__footer">
+                <div class="cart__promo">
+                    <form action="" class="form">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Код подарочного сертификата">
+                        </div>
+                    </form>
+                </div>
+                <div class="cart__total">Итого: <span>1890 руб</span></div>
+            </div>
+            <div class="cart__btn-group">
+                <a href="" class="btn btn--blue">Купить в один клик</a>
+                <a href="" class="btn btn--purple">Оформить заказ</a>
+            </div>
+        </div>
+    </section>
+
+	{# footer #}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

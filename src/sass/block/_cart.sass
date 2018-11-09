@@ -1,0 +1,153 @@
+// cart
+.cart
+    margin-bottom: 3rem
+    &__to-right
+        display: flex
+        justify-content: flex-end
+        justify-items: flex-end
+    &__clear
+        text-align: right
+        color: rgba(0, 0, 0, 0.3)
+        position: relative
+        margin-bottom: 1rem
+        margin-right: -1rem
+        +rmin($md)
+            margin-right: 0
+        &:after
+            position: absolute
+            content: ' '
+            background: rgba(0, 0, 0, 0.3)
+            bottom: -1px
+            left: 0
+            width: 100%
+            height: 1px
+            +tr(all ease 0.2s)
+        &:hover:after
+            opacity: 0.5
+
+
+    &__table
+        & strong
+            font-weight: 500
+    &__htable
+        padding: 1rem 0
+        display: none
+        +rmin($md)
+            display: block
+    &__row
+        display: flex
+        flex-wrap: wrap
+        align-content: center
+        align-items: center
+        justify-content: space-between
+        padding: 1rem
+        margin-bottom: 2rem
+        border-bottom: 1px solid #dddddd
+        margin-left: -1rem
+        margin-right: -1rem
+        box-shadow: 0 0 10px 2px rgba(0,0,0,.05)
+        position: relative
+        +rmin($md)
+            margin-left: -1rem
+            margin-right: -1rem
+            margin-bottom: 2rem
+            padding: 1rem
+            padding-bottom: 2rem
+            box-shadow: none
+    &__htable &__row
+        margin-bottom: 0
+        padding-bottom: 0
+        border-bottom: 0
+    &__col
+        //flex: 1 1 50%
+        margin-right: 2rem
+        text-align: center
+        +rmin($md)
+            flex: 1 1 10rem
+        &:last-child
+            margin-right: 0
+
+    &__img
+        width: 9rem
+        margin-right: 1rem
+        +rmin($md)
+            width: 11rem
+            margin-right: 2rem
+    &__price
+        font-size: 1.5rem
+        font-weight: bold
+        text-align: right
+        margin-right: 0
+    &__cprice
+        display: none
+        +rmin($md)
+            display: block
+        & span 
+            text-decoration: line-through
+    &__count
+        display: flex
+        justify-content: center
+    &__name
+        width: calc(100% - 10rem)
+        text-align: left
+        margin-right: 0
+        +rmin($md)
+            flex: 1 1 15rem
+    &__title
+        font-size: 1.125rem
+        font-weight: 500
+    &__htitle
+        font-size: 1.125rem
+        font-weight: 500
+    &__deliver
+        width: 100%
+        height: 1px
+        background: #dddddd
+        margin-top: 1rem
+        margin-bottom: 0.75rem
+        +rmin($md)
+            display: none
+
+    // delete absolute icon
+    &__delete
+        position: absolute
+        top: 1rem
+        right: 1rem
+        display: block
+    
+    // bottom 
+    &__footer
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-content: center
+        align-items: center
+        +rmin($md)
+            justify-content: space-between
+    &__promo
+        max-width: 17rem
+        width: 100%
+    &__total
+        font-size: 1.5rem
+        font-weight: 400
+        width: 100%
+        text-align: center
+        +rmin($md)
+            width: auto
+            text-align: right
+        & span 
+            font-weight: 500
+
+    &__btn-group
+        display: flex
+        justify-content: flex-end
+        margin-top: 1.5rem
+        & .btn
+            width: 50%
+            +rmin($md)
+                width: auto
+                min-width: 12rem
+            &:first-child
+                margin-right: 0.5rem
+                +rmin($md)
+                    margin-right: 2rem
