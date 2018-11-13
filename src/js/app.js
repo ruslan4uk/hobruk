@@ -8,6 +8,68 @@ function stopDefAction(evt) {
   evt.preventDefault();
 }
 
+// filter open popup
+$(document).on("click", ".filter__item", function(e) {
+  e.stopPropagation();
+  $(".filter__popup").slideUp(100);
+  if (
+    $(this)
+      .find(".filter__popup")
+      .is(":visible")
+  ) {
+    $(this)
+      .find(".filter__popup")
+      .slideUp(100)
+      .removeClass("is-active");
+  } else {
+    $(this)
+      .find(".filter__popup")
+      .slideDown(100)
+      .addClass("is-active");
+  }
+});
+$(document).on("click", ".filter__popup", function(e) {
+  if ($(this).hasClass("is-active")) {
+    e.stopPropagation();
+  }
+});
+$(window).click(function() {
+  $(".filter__popup").slideUp(100);
+});
+
+// top shadow stick
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 100) {
+    $(".top").addClass("top--stick");
+  } else {
+    $(".top").removeClass("top--stick");
+  }
+});
+
+// profile nav
+$(document).on("click", ".js--profile", function(e) {
+  e.stopPropagation();
+  let pnav = $(".js--profile-nav");
+  if (!pnav.is(":visible")) {
+    pnav.slideDown(100);
+  } else {
+    pnav.slideUp(100);
+  }
+});
+$(window).click(function() {
+  $(".js--profile-nav").slideUp(100);
+});
+
+// burger menu open
+$(document).on("click", ".js--nav-burger", function() {
+  $(".js--nav").addClass("navigation--is-open");
+});
+$(document).on("click", ".js--nav-close", function() {
+  $(".js--nav").removeClass("navigation--is-open");
+});
+
 // contact more map btn
 $(document).on("click", ".js--contact-more", function(e) {
   //console.log($(this));

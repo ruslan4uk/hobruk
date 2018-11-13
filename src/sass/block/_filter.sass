@@ -18,7 +18,8 @@
     
     // filter item
     &__item
-        margin-top: 1.25rem
+        margin-top: 1.5rem
+        margin-bottom: 0.25rem
         padding: 0.5rem 0.5rem
         justify-content: center
         border: 1px solid #cccccc
@@ -27,6 +28,7 @@
         align-content: center
         width: calc(16.66666667% - 1rem)
         cursor: pointer
+        position: relative
         +rmin($md)
             padding: 0.5rem 0.25rem 0.5rem 1rem
             width: calc(20% - 1rem)
@@ -45,9 +47,63 @@
         display: none
         +rmin($md) 
             display: block
-        
 
 
+    // popup
+    &__popup
+        display: none
+        z-index: 3
+        position: absolute
+        top: 2.5rem
+        left: -1px
+        background: #FFFFFF
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        box-sizing: border-box
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08)
+        border-radius: 2px
+        padding: 1rem 1rem
+        cursor: default
+    &__item:nth-child(4) &__popup, &__item:nth-child(5) &__popup,
+    &__item:nth-child(6) &__popup
+        left: auto
+        right: -1px
+        +rmin($sm)
+            left: -1px
+            right: auto
+    &__item:nth-child(5) &__popup, &__item:nth-child(6) &__popup
+        left: auto
+        right: -1px
+        +rmin($sm)
+            left: auto
+            right: -1px
+    &__group
+        margin-top: 0.5rem
+        margin-bottom: 0.5rem
+    &__checkbox
+        position: absolute
+        left: -9999px
+    &__label
+        font-size: 0.875rem
+        position: relative
+        padding-left: 1.5rem
+        &:after
+            content: ' '
+            position: absolute
+            left: 0
+            top: 0
+            width: 1rem
+            height: 1rem
+            border: 1px solid rgba(0, 0, 0, 0.38)
+            box-sizing: border-box
+            border-radius: 1px
+    &__checkbox:checked + &__label:after
+        border: 1px solid #37ADCF
+        background-image: url(../img/general/fcheck.svg)
+        background-repeat: no-repeat
+        background-position: center center
+    &__btn
+        min-width: 13rem
+        margin-top: 1rem
 
 
 // filter sort
@@ -74,3 +130,6 @@
         font-size: 0.875rem
         &:hover, &.active
             color: $blue
+
+
+    

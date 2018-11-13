@@ -1,28 +1,88 @@
 .navigation
-    border-bottom: 1px solid #e6e6e6
-    display: none
-    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.05)
+    border-bottom: 1px solid #e6e6e6    
+    position: fixed
+    z-index: 6
+    top: 0
+    left: 0
+    width: 100%
+    background: #ffffff
+    padding-top: 2rem
+    transform: translateX(calc(-100% - 5rem))
+    +tr(all ease 0.3s)
+    &--is-open
+        transform: translateX(0)
     +rmin($md)
-        display: block
+        box-shadow: 0 2px 2px 2px rgba(0,0,0,0.05)
+        position: relative
+        padding-top: 0
+        transform: translateX(0)
+        z-index: 4
+        +tr(all ease 0)
     &__list
         display: flex
         align-items: center
         justify-content: space-between
+        flex-wrap: wrap
     &__item
-        padding: 1.5rem 0.25rem
+        padding: 1rem 0
+        width: 100%
+        +rmin($md)
+            width: auto
+            padding: 1.5rem 0.25rem
     &__link
-        font-size: 0.875rem
+        font-size: 1.125rem
         color: #000000
         text-decoration: none
         position: relative
+        font-weight: 500
+        +rmin($md)
+            font-size: 0.875rem
+            font-weight: 400
         &:after
             content: ' '
             background: $purple
             height: 2px
-            width: 0
+            width: 2rem
             position: absolute
-            bottom: -3px
+            bottom: -6px
             left: 0
             +tr(all ease 0.3s)
+            +rmin($md)
+                width: 0
+                bottom: -3px
         &:hover:after
-            width: 100%
+            +rmin($md)
+                width: 100%
+
+
+
+    // mobile
+    &__close
+        position: absolute
+        top: 1.75rem
+        right: 1.5rem
+        width: 1.5rem
+        height: 1.5rem
+        display: block
+        cursor: pointer
+        +rmin($md)
+            display: none
+    
+    &__phone
+        margin-top: 1rem
+        font-size: 1rem
+        display: block
+        +rmin($md)
+            display: none
+        & span 
+            font-size: 1.125rem
+    &__social
+        margin-top: 1.5rem
+        margin-bottom: 1.5rem
+        font-size: 1.25rem
+        display: block
+        +rmin($md)
+            display: none
+        & svg
+            fill: #000000 
+            opacity: 1

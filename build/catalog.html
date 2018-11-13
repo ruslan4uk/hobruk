@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" media="all" href="css/app.css" />
+    <link rel="stylesheet" media="all" href="css/app.css?ver=1.03" />
   </head>
   <body>
     <!-- BEGIN content -->
@@ -20,31 +20,43 @@
             <input type="button" value="" class="search__btn" />
           </div>
           <div class="top__btns">
-            <div class="top__iblock icon">
+            <div class="top__iblock top__profile icon js--profile">
               <svg class="icon__svg icon__svg--blue">
                 <use xlink:href="img/sprite.svg#icon-profile"></use>
               </svg>
               <svg class="icon__svg icon__svg--blue icon__svg--arr">
                 <use xlink:href="img/sprite.svg#icon-arr"></use>
               </svg>
+              <div class="top__tpop tpop js--profile-nav">
+                <a href="" class="tpop__link">Учетная запись</a>
+                <a href="" class="tpop__link">Заказы</a>
+                <a href="" class="tpop__link">Бонусные баллы</a>
+                <a href="" class="tpop__link tpop__link--purple tpop__link--exit">Выход</a>
+              </div>
             </div>
-            <div class="top__iblock icon">
+            <div class="top__iblock top__favorite icon">
               <svg class="icon__svg icon__svg--purple">
                 <use xlink:href="img/sprite.svg#icon-favorites"></use>
               </svg>
               <span class="icon__right">(2)</span>
             </div>
-            <div class="top__iblock top__iblock--pr0 icon">
+            <div class="top__iblock top__cart top__iblock--pr0 icon">
               <svg class="icon__svg icon__svg--blue">
                 <use xlink:href="img/sprite.svg#icon-cart"></use>
               </svg>
-              <span class="icon__right">1432P</span>
+              <span class="icon__right top__mhide">1432P</span>
+            </div>
+            <div class="top__iblock top__burger js--nav-burger">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="navigation">
+    <div class="faker"></div>
+    <section class="navigation js--nav">
       <div class="container">
         <div class="navigation__wrap">
           <ul class="navigation__list">
@@ -58,6 +70,35 @@
             <li class="navigation__item"><a href="" class="navigation__link">Контакты</a></li>
           </ul>
         </div>
+        <div class="navigation__mobile">
+          <div class="navigation__phone icon">
+            <svg class="icon__svg icon__svg--blue">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            <span class="icon__right">8 (499) 350-07-00</span>
+          </div>
+          <div class="navigation__social social">
+            <div class="social__wrap">
+              <div class="social__item">
+                <a href="" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="img/sprite.svg#icon-socialInst"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="social__item">
+                <a href="" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="img/sprite.svg#icon-socialVk"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navigation__close js--nav-close">
+        <img src="img/general/cartDelete.svg" alt="">
       </div>
     </section>
     <section class="head">
@@ -168,7 +209,7 @@
     </section>
     <!-- END content -->
     <!-- BEGIN scripts -->
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/app.js?ver=1.03"></script>
     <!-- END scripts -->
   </body>
 </html>

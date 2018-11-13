@@ -1,5 +1,15 @@
 .top
-    border-bottom: 1px solid #e6e6e6
+    position: fixed
+    top: 0
+    background: #fff
+    width: 100%
+    z-index: 5
+    background: #FFFFFF
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    box-sizing: border-box
+    +tr(all ease 0.2s)
+    &--stick
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08)
     &__wrap
         display: flex
         align-items: center
@@ -9,10 +19,20 @@
         align-items: center
         margin-left: 1rem
     &__iblock
-        padding: 1.5rem
+        padding: 1.25rem
         border-left: 1px solid #e6e6e6
+        position: relative
+        +rmin($md)
+            padding: 1.5rem
         &--pr0 
-            padding-right: 0
+            +rmin($md)
+                padding-right: 0
+        & .icon__svg:not(.icon__svg--arr)
+            max-width: 2rem
+            height: 2rem
+            +rmin($md)
+                max-width: 1.5rem
+                height: 1.5rem
     &__search
         margin-left: 1rem
         max-width: 30rem
@@ -20,3 +40,40 @@
         display: none
         +rmin($md)
             display: block
+    
+    &__favorite
+        display: none
+        +rmin($md)
+            display: flex
+    &__cart
+        & span 
+            display: none
+            +rmin($md)
+                display: block
+    &__profile
+        cursor: pointer
+        & .icon__svg--arr
+            display: none
+            +rmin($md)
+                display: block
+
+    // burger
+    &__burger
+        padding-right: 0
+        cursor: pointer
+        +rmin($md)
+            display: none
+        & span 
+            width: 1.75rem
+            display: block
+            height: 2px
+            margin: 5px 0
+            background: $blue
+
+    // tpop
+    &__tpop
+        position: absolute
+        top: 4rem
+        left: calc(50% - 6rem)
+        z-index: 10
+        display: none
