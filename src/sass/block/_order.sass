@@ -106,6 +106,12 @@
             fill: $purple
             width: 3rem
             height: 3rem
+    & input[type=radio]
+        position: absolute
+        left: -999999rem
+        &:checked + label
+            border: 1px solid rgba(0, 0, 0, 0.2)
+            box-shadow: none
 
     // content
     &__wrap
@@ -162,6 +168,7 @@
             width: 100%
             max-width: 19.75rem
     &__btn
+        display: block
         padding: 2rem 1.5rem
         font-size: 1.125rem
         font-weight: 500
@@ -175,5 +182,10 @@
         &:hover
             border: 1px solid rgba(0, 0, 0, 0.2)
             box-shadow: none
-
+    & input[type=radio]
+        position: absolute
+        left: -9999rem
+        &:checked + label
+            border: 1px solid rgba(0, 0, 0, 0.2)
+            box-shadow: none
     

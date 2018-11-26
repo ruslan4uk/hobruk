@@ -1,0 +1,54 @@
+{
+  "introtext": {
+    "key": "Описание товара",
+    "type": "string"
+  },
+  "color": {
+    "key": "Цвет",
+    "type": "array"
+  },
+  "size": {
+    "key": "Размер",
+    "type": "array"
+  },
+  "tv1": {
+    "key": "Цена оптовая",
+    "type": "string"
+  },
+  "tv2": {
+    "key": "Сложность",
+    "type": "string"
+  },
+  "tv3": {
+    "key": "Количество цветов",
+    "type": "string"
+  },
+  "tv4": {
+    "key": "Товарная категория",
+    "type": "string"
+  },
+  "tv5": {
+    "key": "Размер",
+    "type": "string"
+  }
+}
+
+
+
+{
+  "price": {
+    "key": "Цена продажи",
+    "type": "float",
+    "value": 0
+  },
+  "old_price": {
+    "key": "Цена старая",
+    "type": "float",
+    "value": 0
+  },
+  "tv1": {
+    "key": "Цена оптовая",
+    "type": "float",
+    "value": 0
+  }
+}

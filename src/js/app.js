@@ -1,21 +1,19 @@
-import "jquery";
+//import "jquery";
 import sayHello from "./lib/sayHello.js";
 import "owl.carousel";
-
-sayHello();
 
 function stopDefAction(evt) {
   evt.preventDefault();
 }
 
 // filter open popup
-$(document).on("click", ".filter__item", function(e) {
+$(document).on("click", ".filter__item", function (e) {
   e.stopPropagation();
   $(".filter__popup").slideUp(100);
   if (
     $(this)
-      .find(".filter__popup")
-      .is(":visible")
+    .find(".filter__popup")
+    .is(":visible")
   ) {
     $(this)
       .find(".filter__popup")
@@ -28,17 +26,17 @@ $(document).on("click", ".filter__item", function(e) {
       .addClass("is-active");
   }
 });
-$(document).on("click", ".filter__popup", function(e) {
+$(document).on("click", ".filter__popup", function (e) {
   if ($(this).hasClass("is-active")) {
     e.stopPropagation();
   }
 });
-$(window).click(function() {
+$(window).click(function () {
   $(".filter__popup").slideUp(100);
 });
 
 // top shadow stick
-$(window).scroll(function() {
+$(window).scroll(function () {
   var scroll = $(window).scrollTop();
 
   if (scroll >= 100) {
@@ -49,7 +47,7 @@ $(window).scroll(function() {
 });
 
 // profile nav
-$(document).on("click", ".js--profile", function(e) {
+$(document).on("click", ".js--profile", function (e) {
   e.stopPropagation();
   let pnav = $(".js--profile-nav");
   if (!pnav.is(":visible")) {
@@ -58,20 +56,20 @@ $(document).on("click", ".js--profile", function(e) {
     pnav.slideUp(100);
   }
 });
-$(window).click(function() {
+$(window).click(function () {
   $(".js--profile-nav").slideUp(100);
 });
 
 // burger menu open
-$(document).on("click", ".js--nav-burger", function() {
+$(document).on("click", ".js--nav-burger", function () {
   $(".js--nav").addClass("navigation--is-open");
 });
-$(document).on("click", ".js--nav-close", function() {
+$(document).on("click", ".js--nav-close", function () {
   $(".js--nav").removeClass("navigation--is-open");
 });
 
 // contact more map btn
-$(document).on("click", ".js--contact-more", function(e) {
+$(document).on("click", ".js--contact-more", function (e) {
   //console.log($(this));
   let map = $(this)
     .parent()
@@ -192,7 +190,7 @@ $(".js--pcslider-product-width").owlCarousel({
 });
 
 // tabs
-$(document).on("click", "[data-tabs-nav]", function() {
+$(document).on("click", "[data-tabs-nav]", function () {
   let nTab = $(this).data("tabs-nav");
 
   $("[data-tabs-nav]").removeClass("active");
@@ -207,14 +205,29 @@ if ($("#num_count").length > 0) {
   var numCount = document.getElementById("num_count");
   var plusBtn = document.getElementById("button_plus");
   var minusBtn = document.getElementById("button_minus");
-  plusBtn.onclick = function() {
+  plusBtn.onclick = function () {
     var qty = parseInt(numCount.value);
-    qty = qty + 1;
-    numCount.value = qty;
+    if (qty < 99) {
+      qty = qty + 1;
+      numCount.value = qty;
+    }
   };
-  minusBtn.onclick = function() {
+  minusBtn.onclick = function () {
     var qty = parseInt(numCount.value);
-    qty = qty - 1;
-    numCount.value = qty;
+    if (qty > 1) {
+      qty = qty - 1;
+      numCount.value = qty;
+    }
   };
 }
+// обнуляем инут если меньше или больше нужного 
+$(document).on('blur', '#num_count', function () {
+  var qty = parseInt(numCount.value);
+  if (qty < 1 || qty > 99) {
+    numCount.value = 1;
+  }
+});
+// запрет ввода букв
+$(document).on('keyup change', '#num_count', function () {
+  this.value = this.value.replace(/[^\d]/g, '');
+});

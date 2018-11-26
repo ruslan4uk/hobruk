@@ -219,6 +219,7 @@ h4
 		background-image: url(../img/general/search.svg)
 		background-color: transparent
 		background-size: contain
+		background-repeat: no-repeat
 		width: 1.325rem
 		height: 1.325rem
 		position: absolute
@@ -404,6 +405,10 @@ h4
 			&:hover,&:focus
 				border-bottom: 1px solid #000000
 				color: #000000
+		& .error
+			border-color: $purple !important
+
+	
 
 
 // table
@@ -462,3 +467,30 @@ h4
 // faker
 .faker
 	height: 4.5rem
+
+
+// minishop2 style
+#msMiniCart 
+	color: #000000
+	& span
+		display: flex
+	& .empty 
+		display: block
+	& .not_empty
+		display: none
+	&.full .empty 
+		display: none
+	&.full .not_empty
+		display: block
+
+
+
+// favorites
+.msfavorites
+	& .icon__svg
+		width: 1.5rem
+		background-image: url(../img/general/favorites.svg)
+		background-repeat: no-repeat
+		background-size: contain
+	&.voted .icon__svg
+		background-image: url(../img/general/favorites-vote.svg)
