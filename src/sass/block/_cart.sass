@@ -95,6 +95,8 @@
     &__count
         display: flex
         justify-content: center
+        & button
+            display: none
     &__name
         width: calc(100% - 10rem)
         text-align: left
@@ -159,3 +161,10 @@
                 margin-right: 0.5rem
                 +rmin($md)
                     margin-right: 2rem
+    
+    // view-more
+    &__view-more
+        color: $blue
+        +tr(all ease 0.2s)
+        &:hover
+            color: #000000

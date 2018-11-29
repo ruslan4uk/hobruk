@@ -63,8 +63,10 @@ img
 p 
 	margin-bottom: 1rem
 
+.mb-0
+	margin-bottom: 0 !important
 .mb-1
-	margin-bottom: 1rem
+	margin-bottom: 1rem !important
 .mb-2
 	margin-bottom: 2rem
 .mb-3
@@ -341,7 +343,7 @@ h4
 			width: 100%
 			margin-bottom: 0.25rem
 			display: block
-		& input[type=text]
+		& input[type=text], & input[type=password]
 			padding: 0.375em 0.75em
 			border-bottom: 1px solid #cccccc
 			background: transparent
@@ -407,9 +409,46 @@ h4
 				color: #000000
 		& .error
 			border-color: $purple !important
-
-	
-
+	&__checkbox
+		position: absolute
+		left: -9999rem
+		& + label
+			padding-left: 1.25rem
+			color: #000000
+			position: relative
+			font-size: 0.875rem
+			& a 
+				color: #000000
+				text-decoration: underline
+				&:hover 
+					text-decoration: none
+			&:after
+				content: ' '
+				position: absolute
+				top: 0.125rem
+				left: 0
+				width: 0.875rem
+				height: 0.875rem
+				border: 1px solid #000000
+		&:checked + label:after
+			background-image: url(../img/general/checked.svg)
+			background-size: contain
+			background-repeat: no-repeat
+			background-position: center center
+	&__relative
+		position: relative
+	&__forgot
+		position: absolute
+		right: 0
+		bottom: 0.5rem
+		color: #999999
+		font-size: 0.875rem
+		&--helper
+			display: none
+	// helper block 
+	&__helper
+		font-size: 0.75rem
+		color: red
 
 // table
 .table
@@ -473,9 +512,13 @@ h4
 #msMiniCart 
 	color: #000000
 	& span
-		display: flex
+		display: none
+		+rmin($md)
+			display: flex
 	& .empty 
-		display: block
+		display: none
+		+rmin($md)
+			display: block
 	& .not_empty
 		display: none
 	&.full .empty 
@@ -494,3 +537,128 @@ h4
 		background-size: contain
 	&.voted .icon__svg
 		background-image: url(../img/general/favorites-vote.svg)
+
+
+// modal window style
+.modal
+	display: none
+	max-width: 62.5rem
+	width: 100%
+	border-radius: 4px
+	cursor: default !important
+	padding: 0
+	&--product
+		padding: 2rem
+		max-width: 1000px
+	&--mslist
+		padding: 2rem 1rem
+		max-width: 1200px
+	&--small
+		max-width: 40rem
+		padding: 2rem
+		& .modal__left
+			width: calc(50% - 2rem)
+			margin-right: 2rem
+			height: auto
+			& img 
+				width: 100%
+		& .modal__right 
+			padding: 0
+	&__btns
+		display: flex
+		max-width: 16rem
+		flex-direction: column
+		& a:first-child 
+			margin-bottom: 1rem
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__left
+		width: 100%
+		height: 10rem
+		+rmin($sm)
+			width: 50%
+			height: auto
+	&__bg
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+	&__right
+		padding: 1rem 0 1rem
+		width: 100%
+		+rmin($sm)
+			width: 50%
+			padding: 3rem 0 2rem
+	&__title
+		font-size: 1.5rem
+		font-weight: 500
+		text-align: center
+		margin-bottom: 1rem
+	&__social
+		background: rgba(55, 173, 207, 0.1)
+		padding: 1rem 
+		display: flex
+		justify-content: center
+		justify-items: center
+		align-content: center
+		align-items: center
+		margin-bottom: 1rem
+	&__btn-group
+		display: flex
+		align-content: center
+		align-items: center
+	&__btn
+		margin-left: 1rem
+		max-width: 2rem
+		max-height: 2rem
+	&__cbtn
+		display: flex
+		justify-items: center
+		justify-content: center
+	&__form 
+		padding-left: 2rem
+		padding-right: 2rem
+		+rmin($sm)
+			padding-left: 5rem
+			padding-right: 5rem
+		& input 
+			padding: 0.375em 0 !important
+	&__eblock
+		padding: 0.5rem 0.75rem
+		background: rgba(249, 0, 118, 0.48)
+		font-size: 0.875rem
+		border-radius: 4px
+		display: none
+
+
+// auto complite (ac)
+.ac-ajax
+	position: absolute
+	max-height: 40vh
+	overflow-y: scroll
+	z-index: 9
+	background: #fff
+	box-shadow: 0 0 5px 1px rgba(0,0,0,.1)
+.ac
+	padding: 1rem
+	border-bottom: 1px solid #ccc
+	display: block
+	&__row
+		display: flex
+		align-items: center
+	&__descr
+		font-size: .875rem
+
+
+// mslist
+.mslistorders-order
+	margin-bottom: 0 !important
+.mslist
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-top: 2rem
+	&__col
+		width: 100%
+		+rmin($md)
+			width: calc(50% - 3rem)

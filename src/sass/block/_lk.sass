@@ -1,0 +1,43 @@
+.lk
+    padding: 1rem 0 3rem
+    &__wrap
+        display: flex
+        align-content: flex-start
+        align-items: flex-start
+    &__form-wrap
+        width: 100%
+        justify-content: space-between
+        display: flex
+        flex-wrap: wrap
+        +rmin($md)
+            width: calc(80% - 15rem)
+        &--full 
+            width: 100% !important
+    &__form-col
+        width: 100%
+        +rmin($md)
+            width: calc(50% - 2rem)
+        & input[type=text], & input[type=password]
+            padding-left: 0 !important
+    &__form-btn
+        width: 100%
+    &__nav
+        display: none
+        +rmin($md)
+            display: block
+            width: 100%
+            max-width: 13rem
+            padding: 1em 1.5rem
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08)
+            margin-right: 4rem
+        & li 
+            padding: 0.5rem 0
+            & a 
+                color: #000000
+                font-size: 0.875rem
+                &:hover, &.active
+                    color: $blue
+                &.exit
+                    opacity: 0.54
+                    &:hover
+                        opacity: 0.9

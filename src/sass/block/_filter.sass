@@ -11,6 +11,8 @@
             width: 50%
         +rmin($md)
             width: 60%
+        & .search__form
+            width: 100%
         & .search__input
        		padding: 0.75rem 0.75rem 0.75rem 3rem
         & .search__btn
@@ -129,7 +131,8 @@
         color: #cccccc
         font-size: 0.875rem
         &:hover, &.active
-            color: $blue
+            color: $blue !important
+            cursor: pointer !important
 
 
     

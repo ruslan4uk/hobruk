@@ -1,10 +1,18 @@
-//import "jquery";
+import "jquery";
 import sayHello from "./lib/sayHello.js";
 import "owl.carousel";
 
 function stopDefAction(evt) {
   evt.preventDefault();
 }
+
+
+// forgot password
+$(document).on('click touchend', '#form__forgot', function (e) {
+  e.preventDefault();
+  $(this).parent('.form__group').slideUp(100);
+  $('#form__forgot--helper').slideDown(100);
+});
 
 // filter open popup
 $(document).on("click", ".filter__item", function (e) {
@@ -198,36 +206,4 @@ $(document).on("click", "[data-tabs-nav]", function () {
 
   $("[data-tabs-nav=" + nTab + "]").addClass("active");
   $("[data-tabs-content=" + nTab + "]").addClass("active");
-});
-
-// plus and minus button
-if ($("#num_count").length > 0) {
-  var numCount = document.getElementById("num_count");
-  var plusBtn = document.getElementById("button_plus");
-  var minusBtn = document.getElementById("button_minus");
-  plusBtn.onclick = function () {
-    var qty = parseInt(numCount.value);
-    if (qty < 99) {
-      qty = qty + 1;
-      numCount.value = qty;
-    }
-  };
-  minusBtn.onclick = function () {
-    var qty = parseInt(numCount.value);
-    if (qty > 1) {
-      qty = qty - 1;
-      numCount.value = qty;
-    }
-  };
-}
-// обнуляем инут если меньше или больше нужного 
-$(document).on('blur', '#num_count', function () {
-  var qty = parseInt(numCount.value);
-  if (qty < 1 || qty > 99) {
-    numCount.value = 1;
-  }
-});
-// запрет ввода букв
-$(document).on('keyup change', '#num_count', function () {
-  this.value = this.value.replace(/[^\d]/g, '');
 });
