@@ -9,6 +9,9 @@
         +rmin($sm)
             margin-bottom: 3rem
             padding: 1.5rem 2rem 0.5rem 2rem
+        & a[data-popover-title]
+            color: $purple
+            text-decoration: underline
     &__wrap
         display: flex
         flex-wrap: wrap
@@ -53,8 +56,12 @@
         font-size: 1.5rem
         font-weight: 500
         margin-bottom: 1rem
+        width: 100%
+        text-align: center
         +rmin($sm)
             margin-bottom: 0
+            width: auto
+            text-align: left
         & span 
             margin-left: 0.5rem
             color: #000000
@@ -111,25 +118,38 @@
         left: -999999rem
         &:checked + label
             border: 1px solid rgba(0, 0, 0, 0.2)
+            box-shadow: none 
+        &:disabled + label
+            opacity: 0.38
+            border: 1px solid rgba(0, 0, 0, 0.2)
             box-shadow: none
 
     // content
     &__wrap
         display: flex
+        flex-wrap: wrap
+        &--beetween
+            justify-content: space-between
+    &__adress
+        width: 100%
+        +rmin($md)
+            max-width: calc(33% - 2rem)
+        &-col 
+            width: calc(50% - 1rem)
     &__left
-        width: calc(55% - 1rem)
-        margin-right: 3rem
+        width: 100%
         margin-bottom: 1.5rem
-        display: none
-        +rmin($sm)
+        +rmin($md)
+            width: calc(55% - 1rem)
             display: block
             margin-bottom: 0
+            margin-right: 3rem
     &__right 
         width: 100%
-        max-width: 20rem
         margin-bottom: 1.5rem
-        +rmin($sm)  
+        +rmin($md)  
             width: calc(45% - 1rem)
+            max-width: 20rem
             margin-bottom: 0
     &__contact
         & span 
@@ -186,6 +206,10 @@
         position: absolute
         left: -9999rem
         &:checked + label
+            border: 1px solid rgba(0, 0, 0, 0.2)
+            box-shadow: none
+        &:disabled + label
+            opacity: 0.38
             border: 1px solid rgba(0, 0, 0, 0.2)
             box-shadow: none
     

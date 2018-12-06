@@ -44,6 +44,9 @@ body
 		+rmin($sm)
 			padding: 0 2rem
 
+.hidden
+	display: none
+
 // logo
 .logo
 	max-width: 10.5rem
@@ -52,9 +55,15 @@ body
 		padding-right: 0
 
 // General
+input 
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+
 a 
 	text-decoration: none
 	+tr(all ease 0.3s)
+	-webkit-appearance: none
 img 
 	max-width: 100%
 	font-size: 0
@@ -132,6 +141,8 @@ h4
 
 // btn
 .btn
+	-webkit-appearance: none
+	cursor: pointer
 	border: 0
 	border-radius: 3px
 	line-height: 1.2 !important
@@ -262,9 +273,11 @@ h4
 			margin: 0.75rem
 		+rmin($md)
 			width: calc(33.333333% - 1.5rem)
+	&__full
+		margin: 2rem
 
-
-
+.masonry-grid__item
+	visibility: hidden
 
 
 
@@ -332,6 +345,11 @@ h4
 
 // form
 .form
+	&--np
+		& input[type=text], & input[type=number]
+			padding-left: 0 !important
+	&__hide
+		display: none !important
 	&__group
 		margin-bottom: 1.5rem
 		position: relative
@@ -343,7 +361,7 @@ h4
 			width: 100%
 			margin-bottom: 0.25rem
 			display: block
-		& input[type=text], & input[type=password]
+		& input[type=text], & input[type=password], & input[type=number], & input[type=coupon_code]
 			padding: 0.375em 0.75em
 			border-bottom: 1px solid #cccccc
 			background: transparent
@@ -449,6 +467,33 @@ h4
 	&__helper
 		font-size: 0.75rem
 		color: red
+	&__wrap 
+		display: flex
+
+	// slider
+	&__slider
+		height: 1px !important
+		border-color: $blue !important
+		margin-right: 0.875rem
+		margin-left: 0.25rem
+		& span 
+			border-radius: 50px !important
+			width: 1.5rem !important
+			height: 1.5rem !important
+			top: -0.75rem !important
+			background: #fff !important
+			border: 1px solid $blue !important
+		&-row 
+			display: flex
+			justify-content: space-between
+		&-group 
+			margin-top: 0.5rem
+			max-width: 4rem
+			& input 
+				max-width: 4rem
+			&:last-child
+				& input
+					text-align: right
 
 // table
 .table
@@ -557,13 +602,20 @@ h4
 		max-width: 40rem
 		padding: 2rem
 		& .modal__left
-			width: calc(50% - 2rem)
-			margin-right: 2rem
 			height: auto
+			width: 100%
+			+rmin($sm)
+				width: calc(57% - 2rem)
+				margin-right: 2rem
 			& img 
 				width: 100%
 		& .modal__right 
 			padding: 0
+			width: 100%
+			margin-top: 1rem
+			+rmin($sm)
+				width: calc(43% - 2rem)
+				margin-top: 0
 	&__btns
 		display: flex
 		max-width: 16rem
@@ -630,6 +682,10 @@ h4
 		border-radius: 4px
 		display: none
 
+.msoneclick_modal
+	max-width: 100% !important
+.forder-popup__block--grey 
+    background-color: #fafafa
 
 // auto complite (ac)
 .ac-ajax
@@ -662,3 +718,125 @@ h4
 		width: 100%
 		+rmin($md)
 			width: calc(50% - 3rem)
+
+// easyComm
+.ec-rating-stars
+	& span
+		background: none !important
+		color: #999999 !important
+		border: 1px solid #999999 !important
+		border-radius: 50px !important
+		width: 2rem !important
+		height: 2rem !important
+		margin-right: .5rem !important
+		text-align: center !important
+		-webkit-box-pack: center !important
+		-ms-flex-pack: center !important
+		justify-content: center !important
+		justify-items: center !important
+		font-weight: 300 !important
+		line-height: 1.875rem !important
+		&.active2, &.active
+			border-color: $blue !important
+			color: $blue !important
+.ec-error 
+    font-size: 0.875rem
+    padding: 0.25rem 0
+    color: #e52c2c
+    padding-top: 1rem
+
+
+
+// fotorama
+.fotorama
+	&--quickview
+		//display: none
+		max-height: 350px
+		& img 
+			max-height: 350px
+	&__img
+		display: none
+	&__loaded &__img
+		display: block
+
+
+// popover
+.msshiptor.msshiptor-buttons
+	text-align: center
+	& .btn
+		width: 33%
+.popover
+	margin-top: 1rem
+	position: absolute
+	max-width: 300px
+	background: #ffffff
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)	
+	z-index: 4
+	&:after
+		content: ' '
+		position: absolute
+		width: 1rem
+		height: 1rem
+		top: -0.5rem
+		left: calc(50% - 0.75rem)
+		background: #fff
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)
+		z-index: 2
+		transform: rotate(45deg)
+	&-title
+		display: none
+	&-content 
+		padding: .75rem 0.75rem 0 0.75rem
+		background: #ffffff
+		position: relative
+		z-index: 9
+	&-footer 
+		padding-right: 0.75rem !important
+		background: #fff !important
+		padding-bottom: 0.75rem !important
+		padding-top: 0.5rem !important
+		text-align: center !important
+		margin-top: 0.25rem !important
+	& .btn
+		cursor: pointer
+		border: 0
+		border-radius: 3px
+		line-height: 1.2 !important
+		outline: 0
+		white-space: nowrap
+		font-size: 1rem
+		text-align: center
+		display: inline-block
+		padding: 0.5rem 1.5rem
+		background: $purple
+		color: #ffffff
+		+tr(all ease 0.2s)
+		+rmin($md)
+			padding: 0.75rem 1.25rem
+			font-size: 1rem
+		&:hover
+			opacity: 0.75
+
+
+
+// mbonus
+.mbonus
+	margin-bottom: 1rem
+	&__wrap
+		width: 100%
+		justify-content: space-between
+		align-items: center
+		display: flex
+	&__form-group
+		width: calc(100% - 8rem)
+		margin-bottom: 0
+	&__btn
+		padding: 0.5rem 1.25rem
+	&__helper
+		color: $blue
+		font-size: 0.875rem
+		margin-top: 0.5rem
+		&-text 
+			color: #666666
+			font-size: 0.875rem
+	

@@ -74,8 +74,9 @@
         &:hover
             background: rgba(230, 44, 118, 1)
     &:hover &__short-view
-        display: inline-block
-        cursor: pointer
+        +rmin($sm)
+            display: inline-block
+            cursor: pointer
     &__btns
         position: absolute
         top: 0.5rem
@@ -86,8 +87,9 @@
         opacity: 0
         +tr(all ease 0.2s)
     &:hover &__btns
-        transform: translateY(0)
-        opacity: 1
+        +rmin($sm)
+            transform: translateY(0)
+            opacity: 1
     &__icon
         font-size: 0.825rem
         background: #ffffff

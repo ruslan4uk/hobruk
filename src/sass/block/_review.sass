@@ -1,7 +1,8 @@
 // review
 .review
-    margin-top: 3rem
-    margin-bottom: 3rem
+    &--mtb
+        margin-top: 3rem
+        margin-bottom: 3rem
     & .owl-stage-outer
         margin-left: -1.75rem
         margin-right: -1.75rem
@@ -74,5 +75,6 @@
         margin: 1rem auto 0
         display: flex
         justify-content: center
-        +rmin($xs)
-            display: none
+        &--xs 
+            +rmin($xs)
+                display: none

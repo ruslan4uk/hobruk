@@ -7,10 +7,13 @@
     &__gallery
         width: 100%
         margin-top: 1rem
+        & #msGallery
+            display: flex
+            justify-content: center
         +rmin($md)
-            width: 60%
-        & img  // TODO: delete
-            width: 100%
+            width: 55%
+        & *
+            text-align: center
         & p
             font-size: 0.875rem
             color: $blue 
@@ -20,7 +23,7 @@
         width: 100%
         margin-top: 1rem
         +rmin($md)
-            width: calc(40% - 2rem)
+            width: calc(45% - 2rem)
 
 
     &__mobile
