@@ -46,11 +46,14 @@ body
 
 
 // li and ol style
-ul, ol 
+.news
+	& ul, ol 
 	margin-bottom: 1rem
-ol 
-	list-style-type: decimal
-	margin-left: 20px
+	ol 
+		list-style-type: decimal
+		margin-left: 20px
+		& li 
+			margin-bottom: 1rem
 
 .hidden
 	display: none
