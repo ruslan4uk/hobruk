@@ -1,0 +1,53 @@
+---
+title: Каталог продукции
+category_class: list__category
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# top #}
+	{% include "partials/block/_top.html" %}
+
+	{# navigation #}
+	{% include "partials/block/_navigation.html" %}
+
+    <section class="head">
+        <div class="container">
+            {# breadcrumb #}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb--mt">
+                    <li class="breadcrumb__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb__item active" aria-current="page">Картины по номерам</li>
+                </ol>
+            </nav>
+            <div class="title">Новости</div>
+        </div>
+    </section>
+    
+
+	{# category #}
+	<section class="list">
+        <div class="container">
+            <div class="list__wrap">
+                {% for i in [1,2,3,4,5] %}
+                    <a href="search.html" class="news {{ category_class }}">
+                        <div class="news__img"><img src="img/example/product.png" alt="" /></div>
+                        <div class="news__title">Сегодня выпустили 100500 сюжетов</div>
+                        <div class="news__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem 
+                            fugiat accusantium voluptas minima dolorem nobis. A ratione quas ea omnis. 
+                            Doloribus explicabo ullam culpa labore. Blanditiis doloremque assumenda 
+                            voluptas quos?
+                        </div>
+                        <div class="news__count">25.09.2019</div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+	{# footer #}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

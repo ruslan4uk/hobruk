@@ -181,9 +181,14 @@
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08)
         border-radius: 2px
         margin-bottom: 2rem
+        cursor: pointer
+        +tr(all ease 0.2s)
         +rmin($md)
             width: calc(50% - 3rem)
             margin-bottom: 0
+        &:hover
+            border: 1px solid rgba(0, 0, 0, 0.2)
+            box-shadow: none
         & img 
             width: 100%
             max-width: 19.75rem

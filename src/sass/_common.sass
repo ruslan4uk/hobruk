@@ -44,8 +44,49 @@ body
 		+rmin($sm)
 			padding: 0 2rem
 
+
+// li and ol style
+ul, ol 
+	margin-bottom: 1rem
+ol 
+	list-style-type: decimal
+	margin-left: 20px
+
 .hidden
 	display: none
+
+.njqrowl #jGrowl
+	display: none !important
+
+.text-center
+	text-align: center
+
+// preloader
+.hrpreloader
+	display: none
+	position: fixed
+	z-index: 99
+	top: 50vh
+	left: calc(50vw - 1rem)
+	width: 3rem
+	height: 3rem
+	background-image: url(../img/preloader.svg)
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center center
+	animation: 1s linear 0s normal none infinite running rot
+	-webkit-animation: 1s linear 0s normal none infinite running rot
+// hrpreloader animation
+@keyframes rot 
+	0% 
+		transform: rotate(0deg)
+	100% 
+		transform: rotate(360deg)
+@-webkit-keyframes rot 
+	0% 
+		transform: rotate(0deg)
+	100% 
+		transform: rotate(360deg)
 
 // logo
 .logo
@@ -275,6 +316,15 @@ h4
 			width: calc(33.333333% - 1.5rem)
 	&__full
 		margin: 2rem
+	&__revers
+		& * 
+			color: #000000 !important
+		& .list__product
+			border: 1px solid #cccccc
+		& a.product__image
+			&:after, &:before
+				content: ''
+				display: none
 
 .masonry-grid__item
 	visibility: hidden
@@ -363,7 +413,7 @@ h4
 			display: block
 		& input[type=text], & input[type=password], & input[type=number], & input[type=coupon_code]
 			padding: 0.375em 0.75em
-			border-bottom: 1px solid #cccccc
+			border-bottom: 1px solid #aaaaaa
 			background: transparent
 			font-size: 0.875em
 			width: 100%
@@ -371,15 +421,41 @@ h4
 			&:hover,&:focus
 				color: #000000
 				border-bottom: 1px solid #000000
+		& input[type=file]
+			position: absolute
+			left: -99999px
+			& + label
+				position: relative
+				margin-top: 2rem
+				padding: 0.375em 0.75em 0.375em 2em
+				border-bottom: 1px solid #aaaaaa
+				background: transparent
+				font-size: 1em
+				width: 100%
+				+tr(all ease 0.3s)
+				&:after
+					content: ' '
+					position: absolute
+					left: 0
+					top: 0.25em
+					width: 1.375rem
+					height: 1.375rem
+					background-image: url(../img/general/inputFile.svg)
+					background-size: contain
+					background-repeat: no-repeat
+					background-position: center center
+				&:hover,&:focus
+					color: #000000
+					border-bottom: 1px solid #000000
 		& select 
 			position: relative
 			width: 100%
-			background: transparent
+			background-color: transparent
 			font-size: 1rem
 			-webkit-appearance: none
 			-moz-appearance: none
 			appearance: none
-			padding: 0.75rem 0
+			padding: 0.5rem 0
 			display: block
 			border: 0
 			border-radius: 0
@@ -393,7 +469,7 @@ h4
 			&:hover,&:focus
 				color: #000000
 				border-bottom: 1px solid #000000
-		& select + .form__select-arr
+		& select + .form__select--arr
 			position: absolute
 			bottom: 0.5rem
 			right: 0.75rem
@@ -426,6 +502,8 @@ h4
 				border-bottom: 1px solid #000000
 				color: #000000
 		& .error
+			border-color: $purple !important
+		& input[type=file].error + label
 			border-color: $purple !important
 	&__checkbox
 		position: absolute
@@ -840,3 +918,45 @@ h4
 			color: #666666
 			font-size: 0.875rem
 	
+
+// msPromoCode
+.mspc
+    margin: 1rem 0
+
+.mspc_field
+    padding: 0.5rem
+    border-bottom: 1px solid #e62c76
+    width: 100%
+    font-size: 1rem
+
+.mspc_relative
+    position: relative
+    margin-bottom: 1rem
+
+.mspc_btn
+    position: absolute
+    top: 0.5rem
+    right: 0
+    background: transparent
+    color: #e62c76
+
+.cart__cprice .price, .cart__cprice .price span
+    text-decoration: none
+
+.cart__cprice .old_price:before
+    content: '('
+
+.cart__cprice .old_price:after
+    content: ')'
+
+
+.top__price-btn
+	margin-left: 1rem
+@media(max-width: 992px) 
+	.top__price-btn 
+		display: none  
+.navigation__mobile-price
+	margin: 1rem 0
+@media(min-width: 992px) 
+	.navigation__mobile-price
+		display: none

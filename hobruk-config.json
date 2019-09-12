@@ -52,3 +52,18 @@
     "value": 0
   }
 }
+
+
+{
+  "cart": {
+    "mycarthandler": "{core_path}components\/minishop2\/custom\/cart\/mycarthandler.class.php"
+  },
+  "order": [],
+  "payment": {
+    "mspyacassapaymenthandler": "{core_path}components\/mspyacassa\/controllers\/mspyacassapaymenthandler.class.php",
+    "mspyacassapaymentholdhandler": "{core_path}components\/mspyacassa\/controllers\/mspyacassapaymentholdhandler.class.php"
+  },
+  "delivery": {
+    "msshiptordeliveryhandler": "{core_path}components\/msshiptor\/controllers\/msshiptordeliveryhandler.class.php"
+  }
+}

@@ -1,0 +1,72 @@
+---
+title: Каталог продукции
+category_class: list__category
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# top #}
+	{% include "partials/block/_top.html" %}
+
+	{# navigation #}
+	{% include "partials/block/_navigation.html" %}
+
+    <section class="head">
+        <div class="container">
+            {# breadcrumb #}
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb--mt">
+                    <li class="breadcrumb__item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb__item active" aria-current="page">Картины по номерам</li>
+                </ol>
+            </nav>
+            <div class="title">Новости</div>
+        </div>
+    </section>
+    
+
+	{# category #}
+	<section class="list">
+        <div class="container">
+            <div class="news">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, dolor 
+                recusandae voluptatum et eos vel ducimus eligendi aliquid fuga dolorem 
+                iste totam, voluptates hic ullam, excepturi consequatur culpa iusto sit?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, dolor 
+                recusandae voluptatum et eos vel ducimus eligendi aliquid fuga dolorem 
+                iste totam, voluptates hic ullam, excepturi consequatur culpa iusto sit?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, dolor 
+                recusandae voluptatum et eos vel ducimus eligendi aliquid fuga dolorem 
+                iste totam, voluptates hic ullam, excepturi consequatur culpa iusto sit?</p>
+
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, dolor 
+                recusandae voluptatum et eos vel ducimus eligendi aliquid fuga dolorem 
+                iste totam, voluptates hic ullam, excepturi consequatur culpa iusto sit?</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, dolor 
+                recusandae voluptatum et eos vel ducimus eligendi aliquid fuga dolorem 
+                iste totam, voluptates hic ullam, excepturi consequatur culpa iusto sit?</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, dolor 
+                recusandae voluptatum et eos vel ducimus eligendi aliquid fuga dolorem 
+                iste totam, voluptates hic ullam, excepturi consequatur culpa iusto sit?</li>
+                </ul>
+
+                <ol>
+                    <li>123</li>
+                    <li>qwerty</li>
+                </ol>
+
+                <img src="img/example/product.png" alt="" />
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, dolor 
+                recusandae voluptatum et eos vel ducimus eligendi aliquid fuga dolorem 
+                iste totam, voluptates hic ullam, excepturi consequatur culpa iusto sit?</p>
+            </div>
+        </div>
+    </section>
+
+	{# footer #}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

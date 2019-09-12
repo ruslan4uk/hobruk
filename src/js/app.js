@@ -1,6 +1,17 @@
-import "jquery";
-import sayHello from "./lib/sayHello.js";
-import "owl.carousel";
+import 'jquery';
+import sayHello from './lib/sayHello.js';
+import 'owl.carousel';
+import 'owl.carousel2.thumbs';
+
+var owl = $('.product-carousel');
+owl.owlCarousel({
+  loop: true,
+  items: 1,
+  thumbs: true,
+  thumbImage: true,
+  thumbContainerClass: 'owl-thumbs',
+  thumbItemClass: 'owl-thumb-item',
+});
 
 function stopDefAction(evt) {
   evt.preventDefault();
@@ -8,95 +19,95 @@ function stopDefAction(evt) {
 
 
 // forgot password
-$(document).on('click touchend', '#form__forgot', function (e) {
+$(document).on('click touchend', '#form__forgot', function(e) {
   e.preventDefault();
   $(this).parent('.form__group').slideUp(100);
   $('#form__forgot--helper').slideDown(100);
 });
 
 // filter open popup
-$(document).on("click", ".filter__item", function (e) {
+$(document).on('click', '.filter__item', function(e) {
   e.stopPropagation();
-  $(".filter__popup").slideUp(100);
+  $('.filter__popup').slideUp(100);
   if (
     $(this)
-    .find(".filter__popup")
-    .is(":visible")
+      .find('.filter__popup')
+      .is(':visible')
   ) {
     $(this)
-      .find(".filter__popup")
+      .find('.filter__popup')
       .slideUp(100)
-      .removeClass("is-active");
+      .removeClass('is-active');
   } else {
     $(this)
-      .find(".filter__popup")
+      .find('.filter__popup')
       .slideDown(100)
-      .addClass("is-active");
+      .addClass('is-active');
   }
 });
-$(document).on("click", ".filter__popup", function (e) {
-  if ($(this).hasClass("is-active")) {
+$(document).on('click', '.filter__popup', function(e) {
+  if ($(this).hasClass('is-active')) {
     e.stopPropagation();
   }
 });
-$(window).click(function () {
-  $(".filter__popup").slideUp(100);
+$(window).click(function() {
+  $('.filter__popup').slideUp(100);
 });
 
 // top shadow stick
-$(window).scroll(function () {
+$(window).scroll(function() {
   var scroll = $(window).scrollTop();
 
   if (scroll >= 100) {
-    $(".top").addClass("top--stick");
+    $('.top').addClass('top--stick');
   } else {
-    $(".top").removeClass("top--stick");
+    $('.top').removeClass('top--stick');
   }
 });
 
 // profile nav
-$(document).on("click", ".js--profile", function (e) {
+$(document).on('click', '.js--profile', function(e) {
   e.stopPropagation();
-  let pnav = $(".js--profile-nav");
-  if (!pnav.is(":visible")) {
+  let pnav = $('.js--profile-nav');
+  if (!pnav.is(':visible')) {
     pnav.slideDown(100);
   } else {
     pnav.slideUp(100);
   }
 });
-$(window).click(function () {
-  $(".js--profile-nav").slideUp(100);
+$(window).click(function() {
+  $('.js--profile-nav').slideUp(100);
 });
 
 // burger menu open
-$(document).on("click", ".js--nav-burger", function () {
-  $(".js--nav").addClass("navigation--is-open");
+$(document).on('click', '.js--nav-burger', function() {
+  $('.js--nav').addClass('navigation--is-open');
 });
-$(document).on("click", ".js--nav-close", function () {
-  $(".js--nav").removeClass("navigation--is-open");
+$(document).on('click', '.js--nav-close', function() {
+  $('.js--nav').removeClass('navigation--is-open');
 });
 
 // contact more map btn
-$(document).on("click", ".js--contact-more", function (e) {
+$(document).on('click', '.js--contact-more', function(e) {
   //console.log($(this));
   let map = $(this)
     .parent()
     .parent()
-    .find(".contact__more-map");
-  if ($(this).hasClass("active")) {
-    $(this).removeClass("active");
+    .find('.contact__more-map');
+  if ($(this).hasClass('active')) {
+    $(this).removeClass('active');
     map.slideUp();
-    $(this).text("Смотреть на карте");
+    $(this).text('Смотреть на карте');
   } else {
-    $(this).addClass("active");
+    $(this).addClass('active');
     map.slideDown();
-    $(this).text("Свернуть");
+    $(this).text('Свернуть');
   }
   console.log(map);
 });
 
 // pti review carousel
-$(".js--pti-review").owlCarousel({
+$('.js--pti-review').owlCarousel({
   loop: false,
   margin: 10,
   nav: false,
@@ -123,7 +134,7 @@ $(".js--pti-review").owlCarousel({
 });
 
 // pti portfolio carousel
-$(".js--pti-slider").owlCarousel({
+$('.js--pti-slider').owlCarousel({
   loop: false,
   margin: 10,
   nav: true,
@@ -150,7 +161,7 @@ $(".js--pti-slider").owlCarousel({
 });
 
 // product carousel
-$(".js--pcslider-product").owlCarousel({
+$('.js--pcslider-product').owlCarousel({
   loop: false,
   margin: 10,
   nav: false,
@@ -174,7 +185,7 @@ $(".js--pcslider-product").owlCarousel({
 });
 
 // product carousel
-$(".js--pcslider-product-width").owlCarousel({
+$('.js--pcslider-product-width').owlCarousel({
   loop: false,
   margin: 10,
   nav: false,
@@ -198,12 +209,12 @@ $(".js--pcslider-product-width").owlCarousel({
 });
 
 // tabs
-$(document).on("click", "[data-tabs-nav]", function () {
-  let nTab = $(this).data("tabs-nav");
+$(document).on('click', '[data-tabs-nav]', function() {
+  let nTab = $(this).data('tabs-nav');
 
-  $("[data-tabs-nav]").removeClass("active");
-  $("[data-tabs-content]").removeClass("active");
+  $('[data-tabs-nav]').removeClass('active');
+  $('[data-tabs-content]').removeClass('active');
 
-  $("[data-tabs-nav=" + nTab + "]").addClass("active");
-  $("[data-tabs-content=" + nTab + "]").addClass("active");
+  $('[data-tabs-nav=' + nTab + ']').addClass('active');
+  $('[data-tabs-content=' + nTab + ']').addClass('active');
 });
